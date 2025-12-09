@@ -1,97 +1,63 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import HappyUsers from "./happy-users";
-import HeroBg from "./bg";
+"use client";
+
+import { useState } from "react";
 import { Hero as HeroType } from "@/types/blocks/hero";
-import Icon from "@/components/icon";
-import { Link } from "@/i18n/navigation";
+import { useRouter } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
 
 export default function Hero({ hero }: { hero: HeroType }) {
+  const router = useRouter();
+  const [desc, setDesc] = useState("");
+
   if (hero.disabled) {
     return null;
   }
 
-  const highlightText = hero.highlight_text;
-  let texts = null;
-  if (highlightText) {
-    texts = hero.title?.split(highlightText, 2);
-  }
+  const title = hero.title || "5-minute contracts for home service pros";
+  const description =
+    hero.description ||
+    "Draft clear service agreements for cleaning, lawn care, pet sitting, and more.";
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!desc.trim()) return;
+    router.push(`/contract?desc=${encodeURIComponent(desc.trim())}`);
+  };
 
   return (
-    <>
-      <HeroBg />
-      <section className="py-24">
-        <div className="container">
-          {hero.show_badge && (
-            <div className="flex items-center justify-center mb-8">
-              <img
-                src="/imgs/badges/phdaily.svg"
-                alt="phdaily"
-                className="h-10 object-cover"
+    <section className="py-20 sm:py-24">
+      <div className="container">
+        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+          <h1 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-[40px]">
+            {title}
+          </h1>
+          <p className="mt-4 text-base text-muted-foreground sm:text-lg">{description}</p>
+
+          <form
+            onSubmit={handleSubmit}
+            className="mt-10 flex w-full flex-col items-center gap-4 sm:flex-row sm:justify-center"
+          >
+            <div className="flex w-full max-w-3xl items-center overflow-hidden rounded-full border border-muted-foreground/30 shadow-sm focus-within:ring-2 focus-within:ring-primary">
+              <input
+                value={desc}
+                onChange={(e) => setDesc(e.target.value)}
+                placeholder="Describe your service in one sentence..."
+                className="w-full bg-transparent px-6 py-4 text-sm text-foreground outline-none placeholder:text-muted-foreground"
               />
-            </div>
-          )}
-          <div className="text-center">
-            {hero.announcement && (
-              <Link
-                href={hero.announcement.url as any}
-                className="mx-auto mb-3 inline-flex items-center gap-3 rounded-full border px-2 py-1 text-sm"
-              >
-                {hero.announcement.label && (
-                  <Badge>{hero.announcement.label}</Badge>
+              <button
+                type="submit"
+                className={cn(
+                  "h-full shrink-0 bg-muted px-6 py-3 text-sm font-semibold text-foreground transition",
+                  desc.trim() ? "hover:bg-muted-foreground/20" : "opacity-60",
                 )}
-                {hero.announcement.title}
-              </Link>
-            )}
-
-            {texts && texts.length > 1 ? (
-              <h1 className="mx-auto mb-3 mt-4 max-w-6xl text-balance text-4xl font-bold lg:mb-7 lg:text-7xl">
-                {texts[0]}
-                <span className="bg-linear-to-r from-primary via-primary to-primary bg-clip-text text-transparent">
-                  {highlightText}
-                </span>
-                {texts[1]}
-              </h1>
-            ) : (
-              <h1 className="mx-auto mb-3 mt-4 max-w-6xl text-balance text-4xl font-bold lg:mb-7 lg:text-7xl">
-                {hero.title}
-              </h1>
-            )}
-
-            <p
-              className="m mx-auto max-w-3xl text-muted-foreground lg:text-xl"
-              dangerouslySetInnerHTML={{ __html: hero.description || "" }}
-            />
-            {hero.buttons && (
-              <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-                {hero.buttons.map((item, i) => {
-                  return (
-                    <Link
-                      key={i}
-                      href={item.url as any}
-                      target={item.target || ""}
-                      className="flex items-center"
-                    >
-                      <Button
-                        className="w-full"
-                        size="lg"
-                        variant={item.variant || "default"}
-                      >
-                        {item.icon && <Icon name={item.icon} className="" />}
-                        {item.title}
-                      </Button>
-                    </Link>
-                  );
-                })}
-              </div>
-            )}
-            {hero.tip && (
-              <p className="mt-8 text-md text-muted-foreground">{hero.tip}</p>
-            )}
-            {hero.show_happy_users && <HappyUsers />}
-          </div>
+                disabled={!desc.trim()}
+              >
+                Generate
+              </button>
+            </div>
+          </form>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

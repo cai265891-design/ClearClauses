@@ -1,5 +1,11 @@
 # Repository Guidelines
 
+## 语言 / Language
+
+- **无论用户使用何种语言提问，一律优先使用「简体中文」回答。**
+- 只有在用户明确要求「请用英文回答」时，才使用英文。
+- 代码注释，如无特殊说明，也使用简体中文编写。
+
 ## Project Structure & Module Organization
 - Next.js 15 app router lives in `src/app`; route groups like `(legal)` and `[locale]` hold layouts and pages, with global styles in `src/app/globals.css` and `src/app/theme.css`.
 - Shared UI and hooks sit in `src/components`, `src/hooks`, and `src/contexts`; utilities in `src/lib`; service and integration wrappers in `src/services`, `src/aisdk`, and `src/integrations`.
