@@ -99,136 +99,130 @@
   },
   "introduce": {
     "name": "introduce",
-    "title": "What is ShipAny",
-    "label": "Introduce",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Built in a variety of templates and components.",
-    "image": {
-      "src": "/imgs/features/1.png"
-    },
+    "title": "Why service pros use this instead of random templates",
+    "label": "Advantages",
+    "description": "",
+    "image": null,
     "items": [
       {
-        "title": "Ready-to-use Templates",
-        "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
-        "icon": "RiNextjsFill"
+        "title": "Built around how you actually work",
+        "description": "Choose your type of service – cleaning, lawn & yard care, organizing, pool care, window & gutter cleaning, pet sitting, and more. Your contract is generated to match real jobs, not a generic legal form.",
+        "icon": "RiCheckboxCircleLine",
+        "image": {
+          "src": "/imgs/blocks/feature.png"
+        }
       },
       {
-        "title": "Infrastructure Setup",
-        "description": "Get instant access to scalable infrastructure with best practices built-in.",
-        "icon": "RiDatabase2Line"
+        "title": "Plain-English clauses with clear explanations",
+        "description": "On the left you see the contract text you send to clients. On the right you see simple explanations in everyday language, so you actually understand what each clause does before you use it.",
+        "icon": "RiSpeakLine",
+        "image": {
+          "src": "/imgs/blocks/service.png"
+        }
       },
       {
-        "title": "Quick Deployment",
-        "description": "Deploy your AI SaaS application to production in hours, not days.",
-        "icon": "RiCloudyFill"
+        "title": "More reliable than generic AI chat",
+        "description": "Instead of hallucinating legal-sounding language, each clause is based on a structured brief and industry best-practice snippets. You can see which sources were used, so you know it’s not just made up.",
+        "icon": "RiLightbulbFlashLine",
+        "image": {
+          "src": "/imgs/blocks/hero.png"
+        }
+      },
+      {
+        "title": "Designed for local home & pet care pros",
+        "description": "The clauses focus on the problems you deal with every week: last-minute cancellations, fragile items, pets and safety, access and keys, and no-shows – not corporate law or complex business deals.",
+        "icon": "RiHomeSmileLine",
+        "image": {
+          "src": "/imgs/blocks/feature2.png"
+        }
       }
     ]
   },
   "benefit": {
     "name": "benefit",
-    "title": "Why Choose ShipAny",
-    "label": "Benefits",
-    "description": "Get everything you need to launch your AI startup - from ready-to-use templates to technical support.",
+    "title": "How it works in 3 simple steps",
+    "label": "Steps",
+    "description": "",
     "items": [
       {
-        "title": "Complete Framework",
-        "description": "Built on Next.js with authentication, payments, and AI integration - everything works out of the box.",
-        "icon": "RiNextjsFill",
+        "title": "Step 1 · Describe your service in your own words",
+        "description": "Start with a simple sentence: “bi-weekly house cleaning for 2-bedroom apartments”, “weekly lawn mowing and edging”, or “overnight pet sitting for small dogs”. The assistant turns that into a structured brief for your contract.",
+        "icon": "RiSpeakLine",
+        "image": {
+          "src": "/imgs/features/1.png"
+        }
+      },
+      {
+        "title": "Step 2 · Get a full draft contract in under 5 minutes",
+        "description": "You instantly get a complete service agreement for your type of work, including services provided, fees, cancellations, damage and fragile items, pets and safety, and access and keys—plus side-by-side explanations in plain English.",
+        "icon": "RiFileList3Line",
         "image": {
           "src": "/imgs/features/2.png"
         }
       },
       {
-        "title": "Rich Templates Library",
-        "description": "Choose from various AI SaaS templates to kickstart your project - chatbots, image generation, and more.",
-        "icon": "RiClapperboardAiLine",
+        "title": "Step 3 · Fine-tune specific clauses with a helper",
+        "description": "Want stricter same-day cancellation rules? Need a clear limit for fragile items? Click “I need to modify…” on any clause, describe what you want, and the assistant rewrites just that section while keeping the rest of your contract intact.",
+        "icon": "RiEditLine",
         "image": {
           "src": "/imgs/features/3.png"
-        }
-      },
-      {
-        "title": "Technical Guidance",
-        "description": "Get dedicated support and join our developer community to ensure your successful launch.",
-        "icon": "RiCodeFill",
-        "image": {
-          "src": "/imgs/features/4.png"
         }
       }
     ]
   },
   "usage": {
     "name": "usage",
-    "title": "How to Launch with ShipAny",
-    "description": "Get your AI SaaS startup running in three simple steps:",
-    "image": {
-      "src": "/imgs/features/1.png"
-    },
-    "image_position": "left",
-    "text_align": "center",
+    "title": "See what your contract can look like",
+    "description": "Here are examples of the kind of contracts you can generate in a few minutes.",
+    "image": null,
+    "image_position": "right",
+    "text_align": "left",
     "items": [
       {
-        "title": "Get ShipAny",
-        "description": "Buy ShipAny with a one-time payment. Check your email for the code and documentation.",
+        "title": "Example: recurring home cleaning contract",
+        "description": "A bi-weekly cleaning agreement for a two-bedroom home with a clear scope of work, what’s included and what’s not, a 24-hour cancellation window, a damage cap per visit, and a short pets and safety clause if there are animals in the home.\n- Services: recurring home cleaning, not organizing or moving heavy furniture.\n- Cancellations: full fee for same-day cancellations, no fee with 48+ hours’ notice.\n- Damage: reasonable cap per visit, clear rules for fragile or high-value items.\n- Pets: safe working conditions and the right to pause if behavior is unsafe.",
         "image": {
           "src": "/imgs/features/5.png"
         }
       },
       {
-        "title": "Start Your Project",
-        "description": "Read the documentation and clone the code of ShipAny. Start building your AI SaaS startup.",
+        "title": "Example: lawn & yard care agreement",
+        "description": "A front-yard mowing and edging service with seasonal visits, transparent pricing per visit or per month, simple weather and access rules, and expectations around gates, pets in the yard, and debris on the lawn.\n- Services: mowing, edging, and basic cleanup after each visit.\n- Schedule: regular visits with flexibility for weather delays.\n- Access: clear rules for gates, locks, and obstacles in the yard.\n- Safety: guidance for pets, toys, and items left on the grass.",
         "image": {
           "src": "/imgs/features/6.png"
-        }
-      },
-      {
-        "title": "Customize Your Project",
-        "description": "Modify the template with your data and contents. Specific AI functionality needs.",
-        "image": {
-          "src": "/imgs/features/7.png"
-        }
-      },
-      {
-        "title": "Deploy to Production",
-        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
-        "image": {
-          "src": "/imgs/features/8.png"
         }
       }
     ]
   },
   "feature": {
     "name": "feature",
-    "title": "Key Features of ShipAny",
-    "description": "Everything you need to launch your AI SaaS startup quickly and efficiently.",
+    "title": "How this compares to templates and generic AI",
+    "description": "You already have options. Here’s how they stack up:",
     "items": [
       {
-        "title": "Next.js Boilerplate",
-        "description": "Production-ready Next.js templates with SEO-friendly structure and i18n support.",
-        "icon": "RiNextjsFill"
+        "title": "Fits home & pet care work",
+        "description": "Templates: Usually generic and not written for cleaning, lawn care, or pet services. Generic AI: Depends on your prompt; often drifts into vague or irrelevant legal language. This tool: Built specifically for small home & pet care service providers.",
+        "icon": "RiHomeLine"
       },
       {
-        "title": "Authentication & Payments",
-        "description": "Integrated Google OAuth, one-tap login, and Stripe payment processing.",
-        "icon": "RiKey2Fill"
+        "title": "Easy to understand",
+        "description": "Templates: Dense legal text only. Generic AI: Explanations buried in chat. This tool: Side-by-side contract text and plain-English explanations for every key clause.",
+        "icon": "RiBookOpenLine"
       },
       {
-        "title": "Data Infrastructure",
-        "description": "Built-in Supabase integration for reliable and scalable data storage.",
-        "icon": "RiDatabase2Line"
+        "title": "Source & reliability",
+        "description": "Templates: Unknown authors or freshness. Generic AI: Often hallucinated. This tool: Uses structured prompts and industry best-practice snippets with source notes.",
+        "icon": "RiCheckboxMultipleBlankLine"
       },
       {
-        "title": "One-Click Deployment",
-        "description": "Seamless deployment to Vercel or Cloudflare with automated setup.",
-        "icon": "RiCloudy2Fill"
+        "title": "Time to first usable draft",
+        "description": "Templates: Fast to download, slow to adapt. Generic AI: Multiple retries for consistency. This tool: Usually under 5 minutes from description to ready-to-edit draft.",
+        "icon": "RiTimer2Line"
       },
       {
-        "title": "Business Analytics",
-        "description": "Integrated Google Analytics and Search Console for tracking growth.",
-        "icon": "RiBarChart2Line"
-      },
-      {
-        "title": "AI-Ready Infrastructure",
-        "description": "Pre-configured AI integration with built-in credits system and API sales.",
-        "icon": "RiRobot2Line"
+        "title": "Cost",
+        "description": "Templates: Free but risky. Generic AI: Included in AI subscriptions with hit-or-miss quality. This tool: Free to generate and review; pay only when you download.",
+        "icon": "RiMoneyDollarCircleLine"
       }
     ]
   },
@@ -258,109 +252,47 @@
   },
   "testimonial": {
     "name": "testimonial",
-    "label": "Testimonial",
-    "title": "What Users Say About ShipAny",
-    "description": "Hear from developers and founders who launched their AI startups with ShipAny.",
-    "icon": "GoThumbsup",
-    "items": [
-      {
-        "title": "David Chen",
-        "label": "Founder of AIWallpaper.shop",
-        "description": "ShipAny saved us months of development time. We launched our AI wallpaper business in just 2 days and got our first paying customer within a week!",
-        "image": {
-          "src": "/imgs/users/1.png"
-        }
-      },
-      {
-        "title": "Rachel Kim",
-        "label": "CTO at HeyBeauty.ai",
-        "description": "The pre-built AI infrastructure is a game-changer. We didn't have to worry about architecture - just focused on our AI beauty tech and went live fast.",
-        "image": {
-          "src": "/imgs/users/2.png"
-        }
-      },
-      {
-        "title": "Marcus Thompson",
-        "label": "Solo Developer",
-        "description": "As a solo developer, ShipAny gave me everything I needed - auth, payments, AI integration, and beautiful UI. Launched my SaaS in a weekend!",
-        "image": {
-          "src": "/imgs/users/3.png"
-        }
-      },
-      {
-        "title": "Sofia Garcia",
-        "label": "CEO of Melodisco",
-        "description": "The templates are production-ready and highly customizable. We built our AI music platform in hours instead of months. Incredible time-to-market!",
-        "image": {
-          "src": "/imgs/users/4.png"
-        }
-      },
-      {
-        "title": "James Wilson",
-        "label": "Tech Lead at GPTs.works",
-        "description": "ShipAny's infrastructure is rock-solid. We scaled from 0 to 10k users without touching the backend. Best investment for our AI startup.",
-        "image": {
-          "src": "/imgs/users/5.png"
-        }
-      },
-      {
-        "title": "Anna Zhang",
-        "label": "Startup Founder",
-        "description": "From idea to launch in 3 days! ShipAny's templates and deployment tools made it possible to test our AI business concept incredibly fast.",
-        "image": {
-          "src": "/imgs/users/6.png"
-        }
-      }
-    ]
+    "disabled": true,
+    "items": []
   },
   "faq": {
     "name": "faq",
     "label": "FAQ",
-    "title": "Frequently Asked Questions About ShipAny",
-    "description": "Have another question? Contact us on Discord or by email.",
+    "title": "FAQ",
+    "description": "Common questions about this home & pet care service agreement assistant.",
     "items": [
       {
-        "title": "What exactly is ShipAny and how does it work?",
-        "description": "ShipAny is a comprehensive NextJS boilerplate designed specifically for building AI SaaS startups. It provides ready-to-use templates, infrastructure setup, and deployment tools that help you launch your AI business in hours instead of days."
+        "title": "Is this legal advice?",
+        "description": "No. This tool generates draft service agreements and plain-language explanations for general informational purposes only. It is not legal advice and does not replace talking to a licensed attorney in your state."
       },
       {
-        "title": "Do I need advanced technical skills to use ShipAny?",
-        "description": "While basic programming knowledge is helpful, ShipAny is designed to be developer-friendly. Our templates and documentation make it easy to get started, even if you're not an expert in AI or cloud infrastructure."
+        "title": "Who is this for?",
+        "description": "This assistant is designed for small local service providers in the US who work in and around people’s homes, including home cleaning and housekeeping, lawn and yard care, home organizing and decluttering, pool care and maintenance, window and gutter cleaning, and pet sitting or dog walking. It is not intended for employment contracts, real estate deals, divorce, or complex business transactions."
       },
       {
-        "title": "What types of AI SaaS can I build with ShipAny?",
-        "description": "ShipAny supports a wide range of AI applications, from content generation to data analysis tools. Our templates cover popular use cases like AI chatbots, content generators, image processing apps, and more."
+        "title": "How much does it cost?",
+        "description": "You can create and review a customized draft contract for free. If you’re happy with the draft and want to download the full document (for example as a PDF or Word file), you’ll see the price clearly before you pay."
       },
       {
-        "title": "How long does it typically take to launch with ShipAny?",
-        "description": "With ShipAny, you can have a working prototype in hours and a production-ready application in hours. Our one-click deployment and pre-configured infrastructure significantly reduce the traditional months-long development cycle."
+        "title": "What about different state laws?",
+        "description": "This tool focuses on clear, practical business terms for typical home and pet care services. It does not check specific state laws or guarantee that any clause is enforceable in a particular jurisdiction. If you have questions about legal requirements in your state, please talk to a local attorney."
       },
       {
-        "title": "What's included in the ShipAny infrastructure?",
-        "description": "ShipAny provides a complete infrastructure stack including authentication, database setup, API integration, payment processing, and scalable cloud deployment. Everything is pre-configured following industry best practices."
-      },
-      {
-        "title": "Can I customize the templates to match my brand?",
-        "description": "Absolutely! All ShipAny templates are fully customizable. You can modify the design, features, and functionality to match your brand identity and specific business requirements while maintaining the robust underlying infrastructure."
+        "title": "Is my information kept private?",
+        "description": "We only use your answers to generate and improve your contract draft. We do not sell your service details to third parties. For more detail, please see our Privacy Policy."
       }
     ]
   },
   "cta": {
     "name": "cta",
-    "title": "Ship your first AI SaaS Startup",
-    "description": "Start from here, ship with ShipAny.",
+    "title": "Ready to stop guessing your contract terms?",
+    "description": "Describe your service once, get a contract you can actually understand, and fine-tune the details with a helper instead of wrestling with random templates.",
     "buttons": [
       {
-        "title": "Get ShipAny",
-        "url": "https://shipany.ai",
-        "target": "_blank",
+        "title": "Start my contract draft",
+        "url": "/contract",
+        "target": "_self",
         "icon": "GoArrowUpRight"
-      },
-      {
-        "title": "Read Document",
-        "url": "https://docs.shipany.ai",
-        "target": "_blank",
-        "variant": "outline"
       }
     ]
   },

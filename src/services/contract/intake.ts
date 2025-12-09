@@ -36,10 +36,12 @@ Based ONLY on the user description above, decide:
 1) Whether this is a supported local/home service agreement.
 2) If supported, how to fill the brief fields.
 3) For every brief field, what confidence score (0.0–1.0) you assign.
+4) Which critical fields are missing or low confidence (missing_critical_fields) and whether to proceed or clarify (next_action).
 
 Remember:
 - If the contract type is not supported (e.g. lease, employment, family-law), set is_supported_service_agreement = false,
   provide a clear unsupported_reason and assistant_out_of_scope_message, and keep all brief fields null (except currency).
+- If critical fields are missing/unclear, list them and set next_action = "clarify_inputs"; otherwise "proceed_to_form".
 - If a detail is not clearly stated, leave the corresponding brief field as null and give it low confidence.
 
 Now return ONLY the JSON object specified in the system instructions, with all required keys.

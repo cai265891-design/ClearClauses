@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { ContractProvider, useContract } from "@/contexts/contract-context";
 import type { Brief, ContractClause } from "@/services/contract/types";
 import { cn } from "@/lib/utils";
+import LoadingLines from "@/components/ui/loading-lines";
 
 interface Props {
   initialDescription?: string;
@@ -167,6 +168,14 @@ function ContractPageInner({ initialDescription }: Props) {
 
   const isLoading =
     status === "intake_loading" || status === "generate_loading" || status === "optimize_loading";
+  const loadingLabel =
+    status === "intake_loading"
+      ? "Preparing your prefilled form..."
+      : status === "generate_loading"
+        ? "Generating your contract..."
+        : status === "optimize_loading"
+          ? `Updating clause${optimizingClauseId ? `: ${optimizingClauseId}` : ""}...`
+          : "";
 
   useEffect(() => {
     if (initialDescription) {
@@ -248,6 +257,20 @@ function ContractPageInner({ initialDescription }: Props) {
   const setDraft = (patch: Partial<Brief>) => {
     setDraftBrief((prev) => ({ ...prev, ...patch }));
   };
+
+  if (isLoading) {
+    return (
+      <div className="mx-auto max-w-6xl px-4 py-12">
+        <div className="min-h-[60vh] rounded-2xl bg-black text-white shadow-xl flex flex-col items-center justify-center px-6 text-center">
+          <LoadingLines />
+          <p className="text-sm font-semibold">{loadingLabel || "Working on it..."}</p>
+          <p className="mt-2 text-xs text-white/70">
+            We are talking to the model. The page will update automatically once it’s ready.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="mx-auto max-w-6xl space-y-8 px-4 py-8">

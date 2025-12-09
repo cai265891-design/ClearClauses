@@ -15,12 +15,22 @@ export async function callChatCompletion<T = unknown>(
   timeoutMs = DEFAULT_TIMEOUT_MS,
 ): Promise<ChatCompletionResult<T>> {
   const logger = createLogger(traceLabel);
-  const apiBase = process.env.LLM_API_BASE;
+  const apiBase = process.env.LLM_API_BASE?.replace(/\/+$/, "");
   const apiKey = process.env.LLM_API_KEY;
 
   if (!apiBase || !apiKey) {
     throw new Error("LLM_API_BASE 或 LLM_API_KEY 未配置");
   }
+
+  // 兼容多种代理路径：根域 /v1、/v1/chat、完整 /v1/chat/completions
+  const endpoint = (() => {
+    if (apiBase.match(/\/v1\/chat\/completions$/)) return apiBase;
+    if (apiBase.match(/\/v1\/chat$/)) return `${apiBase}/completions`;
+    if (apiBase.match(/\/chat\/completions$/)) return apiBase;
+    if (apiBase.match(/\/chat$/)) return `${apiBase}/completions`;
+    if (apiBase.endsWith("/v1")) return `${apiBase}/chat/completions`;
+    return `${apiBase}/v1/chat/completions`;
+  })();
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
@@ -34,7 +44,7 @@ export async function callChatCompletion<T = unknown>(
   };
 
   try {
-    const res = await fetch(`${apiBase}/v1/chat/completions`, {
+    const res = await fetch(endpoint, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

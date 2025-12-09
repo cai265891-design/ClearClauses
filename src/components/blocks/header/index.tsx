@@ -43,15 +43,16 @@ export default function Header({ header }: { header: HeaderType }) {
       <div className="container">
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6">
-            <Link
-              href={(header.brand?.url as any) || "/"}
-              className="flex items-center gap-2"
-            >
-              {header.brand?.logo?.src && (
-                <img
-                  src={header.brand.logo.src}
-                  alt={header.brand.logo.alt || header.brand.title}
-                  className="w-8"
+            {header.brand?.url && (
+              <Link
+                href={(header.brand?.url as any) || "/"}
+                className="flex items-center gap-2"
+              >
+                {header.brand?.logo?.src && (
+                  <img
+                    src={header.brand.logo.src}
+                    alt={header.brand.logo.alt || header.brand.title}
+                    className="w-8"
                 />
               )}
               {header.brand?.title && (
@@ -59,7 +60,8 @@ export default function Header({ header }: { header: HeaderType }) {
                   {header.brand?.title || ""}
                 </span>
               )}
-            </Link>
+              </Link>
+            )}
             <div className="flex items-center">
               <NavigationMenu>
                 <NavigationMenuList>
@@ -84,28 +86,30 @@ export default function Header({ header }: { header: HeaderType }) {
                               <NavigationMenuLink>
                                 {item.children.map((iitem, ii) => (
                                   <li key={ii}>
+                          {iitem.url && (
                                     <Link
                                       className={cn(
                                         "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                       )}
-                                      href={iitem.url as any}
+                                      href={(iitem.url as any) || "/"}
                                       target={iitem.target}
                                     >
-                                      {iitem.icon && (
-                                        <Icon
-                                          name={iitem.icon}
-                                          className="size-5 shrink-0"
-                                        />
-                                      )}
-                                      <div>
-                                        <div className="text-sm font-semibold">
-                                          {iitem.title}
-                                        </div>
-                                        <p className="text-sm leading-snug text-muted-foreground">
-                                          {iitem.description}
-                                        </p>
-                                      </div>
-                                    </Link>
+                              {iitem.icon && (
+                                <Icon
+                                  name={iitem.icon}
+                                  className="size-5 shrink-0"
+                                />
+                              )}
+                              <div>
+                                <div className="text-sm font-semibold">
+                                  {iitem.title}
+                                </div>
+                                <p className="text-sm leading-snug text-muted-foreground">
+                                  {iitem.description}
+                                </p>
+                              </div>
+                            </Link>
+                          )}
                                   </li>
                                 ))}
                               </NavigationMenuLink>
@@ -117,6 +121,7 @@ export default function Header({ header }: { header: HeaderType }) {
 
                     return (
                       <NavigationMenuItem key={i}>
+                        {item.url && (
                         <Link
                           className={cn(
                             "text-muted-foreground",
@@ -125,17 +130,18 @@ export default function Header({ header }: { header: HeaderType }) {
                               variant: "ghost",
                             })
                           )}
-                          href={item.url as any}
+                          href={(item.url as any) || "/"}
                           target={item.target}
                         >
-                          {item.icon && (
-                            <Icon
-                              name={item.icon}
-                              className="size-4 shrink-0 mr-0"
-                            />
-                          )}
-                          {item.title}
-                        </Link>
+                            {item.icon && (
+                              <Icon
+                                name={item.icon}
+                                className="size-4 shrink-0 mr-0"
+                              />
+                            )}
+                            {item.title}
+                          </Link>
+                        )}
                       </NavigationMenuItem>
                     );
                   })}
@@ -147,45 +153,49 @@ export default function Header({ header }: { header: HeaderType }) {
             {header.show_locale && <LocaleToggle />}
             {header.show_theme && <ThemeToggle />}
 
-            {header.buttons?.map((item, i) => {
-              return (
-                <Button key={i} variant={item.variant}>
-                  <Link
-                    href={item.url as any}
-                    target={item.target || ""}
-                    className="flex items-center gap-1 cursor-pointer"
-                  >
-                    {item.title}
-                    {item.icon && (
-                      <Icon name={item.icon} className="size-4 shrink-0" />
-                    )}
-                  </Link>
-                </Button>
-              );
-            })}
+            {header.buttons
+              ?.filter((item) => !!item.url)
+              .map((item, i) => {
+                return (
+                  <Button key={i} variant={item.variant}>
+                    <Link
+                      href={item.url as any}
+                      target={item.target || ""}
+                      className="flex items-center gap-1 cursor-pointer"
+                    >
+                      {item.title}
+                      {item.icon && (
+                        <Icon name={item.icon} className="size-4 shrink-0" />
+                      )}
+                    </Link>
+                  </Button>
+                );
+              })}
             {header.show_sign && <SignToggle />}
           </div>
         </nav>
 
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
-            <Link
-              href={(header.brand?.url || "/") as any}
-              className="flex items-center gap-2"
-            >
-              {header.brand?.logo?.src && (
-                <img
-                  src={header.brand.logo.src}
-                  alt={header.brand.logo.alt || header.brand.title}
-                  className="w-8"
-                />
-              )}
-              {header.brand?.title && (
-                <span className="text-xl font-bold">
-                  {header.brand?.title || ""}
-                </span>
-              )}
-            </Link>
+            {header.brand?.url && (
+              <Link
+                href={(header.brand?.url || "/") as any}
+                className="flex items-center gap-2"
+              >
+                {header.brand?.logo?.src && (
+                  <img
+                    src={header.brand.logo.src}
+                    alt={header.brand.logo.alt || header.brand.title}
+                    className="w-8"
+                  />
+                )}
+                {header.brand?.title && (
+                  <span className="text-xl font-bold">
+                    {header.brand?.title || ""}
+                  </span>
+                )}
+              </Link>
+            )}
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="default" size="icon">
@@ -228,31 +238,33 @@ export default function Header({ header }: { header: HeaderType }) {
                               {item.title}
                             </AccordionTrigger>
                             <AccordionContent className="mt-2">
-                              {item.children.map((iitem, ii) => (
-                                <Link
-                                  key={ii}
-                                  className={cn(
-                                    "flex select-none gap-4 rounded-md p-3 leading-none outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                  )}
-                                  href={iitem.url as any}
-                                  target={iitem.target}
-                                >
-                                  {iitem.icon && (
-                                    <Icon
-                                      name={iitem.icon}
-                                      className="size-4 shrink-0"
-                                    />
-                                  )}
-                                  <div>
-                                    <div className="text-sm font-semibold">
-                                      {iitem.title}
+                              {item.children
+                                .filter((iitem) => !!iitem.url)
+                                .map((iitem, ii) => (
+                                  <Link
+                                    key={ii}
+                                    className={cn(
+                                      "flex select-none gap-4 rounded-md p-3 leading-none outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                    )}
+                                    href={(iitem.url as any) || "/"}
+                                    target={iitem.target}
+                                  >
+                                    {iitem.icon && (
+                                      <Icon
+                                        name={iitem.icon}
+                                        className="size-4 shrink-0"
+                                      />
+                                    )}
+                                    <div>
+                                      <div className="text-sm font-semibold">
+                                        {iitem.title}
+                                      </div>
+                                      <p className="text-sm leading-snug text-muted-foreground">
+                                        {iitem.description}
+                                      </p>
                                     </div>
-                                    <p className="text-sm leading-snug text-muted-foreground">
-                                      {iitem.description}
-                                    </p>
-                                  </div>
-                                </Link>
-                              ))}
+                                  </Link>
+                                ))}
                             </AccordionContent>
                           </AccordionItem>
                         );
@@ -260,7 +272,7 @@ export default function Header({ header }: { header: HeaderType }) {
                       return (
                         <Link
                           key={i}
-                          href={item.url as any}
+                          href={(item.url as any) || "/"}
                           target={item.target}
                           className="font-semibold my-4 flex items-center gap-2 px-4"
                         >
@@ -279,25 +291,27 @@ export default function Header({ header }: { header: HeaderType }) {
                 <div className="flex-1"></div>
                 <div className="border-t pt-4">
                   <div className="mt-2 flex flex-col gap-3">
-                    {header.buttons?.map((item, i) => {
-                      return (
-                        <Button key={i} variant={item.variant}>
-                          <Link
-                            href={item.url as any}
-                            target={item.target || ""}
-                            className="flex items-center gap-1"
-                          >
-                            {item.title}
-                            {item.icon && (
-                              <Icon
-                                name={item.icon}
-                                className="size-4 shrink-0"
-                              />
-                            )}
-                          </Link>
-                        </Button>
-                      );
-                    })}
+                    {header.buttons
+                      ?.filter((item) => !!item.url)
+                      .map((item, i) => {
+                        return (
+                          <Button key={i} variant={item.variant}>
+                            <Link
+                              href={(item.url as any) || "/"}
+                              target={item.target || ""}
+                              className="flex items-center gap-1"
+                            >
+                              {item.title}
+                              {item.icon && (
+                                <Icon
+                                  name={item.icon}
+                                  className="size-4 shrink-0"
+                                />
+                              )}
+                            </Link>
+                          </Button>
+                        );
+                      })}
 
                     {header.show_sign && <SignToggle />}
                   </div>

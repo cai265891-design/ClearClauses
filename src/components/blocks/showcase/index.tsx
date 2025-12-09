@@ -21,30 +21,32 @@ export default function Showcase({ section }: { section: SectionType }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {section.items?.map((item, index) => (
-          <Link key={index} href={item.url || ""} target={item.target}>
-            <Card className="overflow-hidden transition-all hover:shadow-lg dark:hover:shadow-primary/10 p-0">
-              <CardContent className="p-0">
-                <div className="relative aspect-[16/10] w-full overflow-hidden">
-                  <Image
-                    src={item.image?.src || ""}
-                    alt={item.image?.alt || item.title || ""}
-                    fill
-                    className="object-cover rounded-t-lg transition-transform duration-300 hover:scale-110"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 line-clamp-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-3">
-                    {item.description}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
+        {section.items
+          ?.filter((item) => !!item.url)
+          .map((item, index) => (
+            <Link key={index} href={item.url as any} target={item.target}>
+              <Card className="overflow-hidden transition-all hover:shadow-lg dark:hover:shadow-primary/10 p-0">
+                <CardContent className="p-0">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden">
+                    <Image
+                      src={item.image?.src || ""}
+                      alt={item.image?.alt || item.title || ""}
+                      fill
+                      className="object-cover rounded-t-lg transition-transform duration-300 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2 line-clamp-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground line-clamp-3">
+                      {item.description}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
       </div>
     </section>
   );

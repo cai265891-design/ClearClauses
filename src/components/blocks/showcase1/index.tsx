@@ -82,7 +82,9 @@ export default function Showcase1({ section }: { section: SectionType }) {
           }}
         >
           <CarouselContent className="container ml-[calc(theme(container.padding)-20px)] mr-[calc(theme(container.padding))] 2xl:ml-[calc(50vw-700px+theme(container.padding)-20px)] 2xl:mr-[calc(50vw-700px+theme(container.padding))]">
-            {section.items?.map((item, i) => (
+            {section.items
+              ?.filter((item) => !!item.url)
+              .map((item, i) => (
               <CarouselItem
                 key={i}
                 className="max-w-[320px] pl-[20px] lg:max-w-[360px]"

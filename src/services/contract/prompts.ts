@@ -119,6 +119,22 @@ each mapped to a number between 0.0 and 1.0:
 If a field is null because the user never mentioned it, confidence should be low (0.0–0.3).
 
 ========================
+CRITICAL FIELDS & NEXT ACTION
+========================
+
+- missing_critical_fields: include any of the following keys when they are null OR have confidence < 0.4:
+  - "service_type"
+  - "what_service"
+  - "how_charge_model"
+  - "how_charge_text"
+  - "cancellation_notice_hours"
+  - "cancellation_fee_policy"
+- next_action:
+  - "clarify_inputs" if missing_critical_fields is not empty AND is_supported_service_agreement is true.
+  - "proceed_to_form" if missing_critical_fields is empty and the request is supported.
+  - If is_supported_service_agreement is false, set missing_critical_fields = [] and next_action = "clarify_inputs".
+
+========================
 SUPPORTED / NOT SUPPORTED LOGIC
 ========================
 
@@ -173,6 +189,8 @@ You must return exactly one JSON object with this shape:
   "is_supported_service_agreement": boolean,
   "unsupported_reason": string or null,
   "assistant_out_of_scope_message": string or null,
+  "missing_critical_fields": [string],
+  "next_action": "proceed_to_form" | "clarify_inputs",
   "brief": {
     "service_type": string or null,
     "what_service": string or null,

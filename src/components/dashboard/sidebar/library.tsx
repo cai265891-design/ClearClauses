@@ -45,14 +45,16 @@ export function Library({ library }: { library: LibraryType }) {
                   : ""
               }`}
             >
-              <Link
-                href={(item.url || "") as any}
-                target={item.target}
-                className="w-full flex items-center gap-2 cursor-pointer"
-              >
-                {item.icon && <Icon name={item.icon} />}
-                <span>{item.title}</span>
-              </Link>
+              {item.url && (
+                <Link
+                  href={item.url as any}
+                  target={item.target}
+                  className="w-full flex items-center gap-2 cursor-pointer"
+                >
+                  {item.icon && <Icon name={item.icon} />}
+                  <span>{item.title}</span>
+                </Link>
+              )}
             </SidebarMenuButton>
             <DropdownMenu>
               {/* <DropdownMenuTrigger asChild>

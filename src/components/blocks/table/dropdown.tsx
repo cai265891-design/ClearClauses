@@ -33,20 +33,22 @@ export default function ({ items }: { items: NavItem[] }) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
-        {items.map((item) => {
-          return (
-            <DropdownMenuItem key={item.title}>
-              <Link
-                href={item.url || ""}
-                target={item.target || "_self"}
-                className="flex items-center gap-2"
-              >
-                {item.icon && <Icon name={item.icon} className="w-4 h-4" />}
-                {item.title}
-              </Link>
-            </DropdownMenuItem>
-          );
-        })}
+        {items
+          .filter((item) => !!item.url)
+          .map((item) => {
+            return (
+              <DropdownMenuItem key={item.title}>
+                <Link
+                  href={item.url as any}
+                  target={item.target || "_self"}
+                  className="flex items-center gap-2"
+                >
+                  {item.icon && <Icon name={item.icon} className="w-4 h-4" />}
+                  {item.title}
+                </Link>
+              </DropdownMenuItem>
+            );
+          })}
       </DropdownMenuContent>
     </DropdownMenu>
   );
