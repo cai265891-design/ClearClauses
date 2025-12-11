@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ContractProvider, useContract } from "@/contexts/contract-context";
 import { cn } from "@/lib/utils";
 import {
@@ -541,6 +541,8 @@ function ContractPageInner({ initialDescription }: Props) {
   const [selectedClauseId, setSelectedClauseId] = useState<string>("");
   const [userNote, setUserNote] = useState("");
   const [isExplanationOpen, setIsExplanationOpen] = useState(true);
+  const [handleLeft, setHandleLeft] = useState<number | null>(null);
+  const stepContainerRef = useRef<HTMLDivElement>(null);
   const hasContractReady = Boolean(contract && status !== "generate_loading");
   const footnoteMap = useMemo(() => {
     if (!contract) return {};
@@ -759,6 +761,23 @@ function ContractPageInner({ initialDescription }: Props) {
     }
   }, [isExplanationOpen]);
 
+  useEffect(() => {
+    const updateHandleLeft = () => {
+      const target = stepContainerRef.current;
+      if (!target) return;
+      const rect = target.getBoundingClientRect();
+      const gap = 16;
+      const left = Math.min(rect.right + gap, window.innerWidth - 48);
+      setHandleLeft(left);
+    };
+
+    updateHandleLeft();
+    window.addEventListener("resize", updateHandleLeft);
+    return () => {
+      window.removeEventListener("resize", updateHandleLeft);
+    };
+  }, []);
+
   const handleOptimize = async () => {
     if (!selectedClauseId || !userNote.trim()) return;
     try {
@@ -791,7 +810,7 @@ function ContractPageInner({ initialDescription }: Props) {
   }
 
   return (
-    <div className={cn("mx-auto max-w-6xl space-y-8 px-4 py-8", hasContractReady && "pb-32")}>
+    <div className={cn("mx-auto max-w-6xl space-y-8 px-4 py-8 relative", hasContractReady && "pb-32")}>
       <div className="flex flex-wrap items-center gap-3">
         <button
           className={cn(
@@ -1005,14 +1024,18 @@ function ContractPageInner({ initialDescription }: Props) {
         </Card>
       )}
 
-      <div id="step-1" className="relative">
+      <div id="step-1" className="relative" ref={stepContainerRef}>
         <TooltipProvider delayDuration={0}>
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
                 variant="outline"
                 size="icon"
-                className="hidden lg:flex fixed right-4 top-[calc(50vh-22px)] z-50 rounded-full bg-white shadow-md"
+                className="hidden lg:flex fixed top-1/2 z-50 -translate-y-1/2 rounded-full bg-white shadow-md"
+                style={{
+                  left: handleLeft ?? undefined,
+                  right: handleLeft === null ? "1rem" : undefined,
+                }}
                 onClick={() => setIsExplanationOpen((prev) => !prev)}
                 aria-label={isExplanationOpen ? "Hide explanations" : "Show explanations"}
               >
