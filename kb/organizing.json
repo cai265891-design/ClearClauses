@@ -1,0 +1,110 @@
+[
+  {
+    "id": "organizing_001",
+    "service_type": "organizing",
+    "clause_type": "cancellations",
+    "title": "7-day cancellation with full session charge",
+    "short_summary": "Reserved time is exclusive; unless a true emergency, less than 7 days’ notice triggers full session fee before rescheduling.",
+    "normalized_clause_en": "Reserved sessions are exclusive to the Client. Unless a true emergency, cancellations require at least 7 days’ notice. If less notice is given, the full session fee is charged and must be paid in full before scheduling further appointments.",
+    "risk_level": "medium",
+    "tags": ["cancellation_policy", "short_notice_fee", "scheduling"],
+    "source": {
+      "url": "https://www.organizingmaniacs.com/faqs/",
+      "page_title": "Frequently Asked Questions — Organizing Maniacs",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "7-day cancellation policy... Unless proper cancellation notice... the fee for the entire session will be charged and must be paid in full prior to the scheduling of any further appointments.",
+    "notes_for_llm": "Strict and provider-leaning; consider a one-time courtesy waiver; clarify what counts as emergency."
+  },
+  {
+    "id": "organizing_002",
+    "service_type": "organizing",
+    "clause_type": "payment",
+    "title": "Payment due at end of session; non-refundable",
+    "short_summary": "Collects payment at session end; accepts check/cash/major cards; fees are non-refundable.",
+    "normalized_clause_en": "Payment is due at the end of each session. Acceptable methods include check, money order, cash, and major credit cards. Fees are non-refundable.",
+    "risk_level": "medium",
+    "tags": ["payment_due", "non_refundable", "payment_methods"],
+    "source": {
+      "url": "https://www.organizingmaniacs.com/faqs/",
+      "page_title": "Frequently Asked Questions — Organizing Maniacs",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "Payment is due at the end of each session... all fees are non-refundable.",
+    "notes_for_llm": "If market expects refunds, consider partial refunds or credits; ensure compliance with local consumer rules."
+  },
+  {
+    "id": "organizing_003",
+    "service_type": "organizing",
+    "clause_type": "services",
+    "title": "Client presence and minimum package",
+    "short_summary": "Client must be present to make decisions; minimum booking is a full-day package with one organizer.",
+    "normalized_clause_en": "Client must be present to make decisions during organizing. A minimum booking is a full-day package with one organizer; shorter ad-hoc sessions are not offered.",
+    "risk_level": "low",
+    "tags": ["attendance", "minimum_hours", "decision_making"],
+    "source": {
+      "url": "https://www.organizingmaniacs.com/faqs/",
+      "page_title": "Frequently Asked Questions — Organizing Maniacs",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "Do I have to be present... Yes... Can I schedule organizing service for a couple of hours? Our minimum package is a day package with 1 professional organizer.",
+    "notes_for_llm": "Make minimum clear upfront to avoid sticker shock; adjust hours based on market norms."
+  },
+  {
+    "id": "organizing_004",
+    "service_type": "organizing",
+    "clause_type": "payment",
+    "title": "Travel and shopping fees",
+    "short_summary": "Travel up to 1 hour is free; beyond may be billed; organizer carries basic tools; special supplies incur a shopping fee.",
+    "normalized_clause_en": "Travel within one hour is included; trips beyond may incur a travel fee. Provider carries standard organizing tools; if specific supplies are needed, a shopping fee will be charged to Client.",
+    "risk_level": "low",
+    "tags": ["travel_fee", "supplies", "shopping_fee"],
+    "source": {
+      "url": "https://www.organizingmaniacs.com/faqs/",
+      "page_title": "Frequently Asked Questions — Organizing Maniacs",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "We will travel up to 1 hour without assessing a travel fee charge... Clients needing specific supplies will be charged a shopping fee.",
+    "notes_for_llm": "Define rate/thresholds; require budget approval for shopping."
+  },
+  {
+    "id": "organizing_005",
+    "service_type": "organizing",
+    "clause_type": "other",
+    "title": "Privacy, confidentiality, and photo consent",
+    "short_summary": "Commits to confidentiality/ethics; allows anonymous use of testimonials and before/after photos with client review and veto.",
+    "normalized_clause_en": "Provider adheres to strict confidentiality and industry codes of ethics. Client information is kept private. Client permits Provider to use anonymized testimonials and before/after photos with identifying details removed in marketing, but Provider will show the photo to Client first and will not publish if Client objects.",
+    "risk_level": "low",
+    "tags": ["privacy", "photo_consent", "confidentiality"],
+    "source": {
+      "url": "https://www.clevergirlorganizing.com/policies-you-should-know/",
+      "page_title": "Policies You Should Know - Clever Girl Organizing",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "Clients can be assured of absolute privacy... adheres strictly to the NAPO Code of Ethics... permission to use, anonymously... Before & After pictures... You will be shown the photo before it is used, and if you object... that’s as far as it goes!",
+    "notes_for_llm": "If clients are privacy-sensitive, make photo use opt-in; keep records of consent."
+  },
+  {
+    "id": "organizing_006",
+    "service_type": "organizing",
+    "clause_type": "cancellations",
+    "title": "3-day cooling-off for door-to-door/temporary sales (FTC)",
+    "short_summary": "If sold at a residence (≥$25) or temporary site (≥$130), client may cancel until midnight of the third business day; provider must give notice/form and refund within 10 business days.",
+    "normalized_clause_en": "For sales made at the Client’s residence (≥ $25) or a temporary location (≥ $130), Client may cancel until midnight of the third business day. Provider must supply written notice of this right and a cancellation form at signing, and refund all payments within 10 business days upon timely cancellation.",
+    "risk_level": "high",
+    "tags": ["cooling_off_rule", "door_to_door", "cancellation_right", "ftc"],
+    "source": {
+      "url": "https://www.ftc.gov/legal-library/browse/rules/cooling-rule",
+      "page_title": "FTC Cooling-Off Rule (16 CFR Part 429)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "regulation"
+    },
+    "source_quote": "Consumers who buy goods or services at their homes... can cancel within three business days... provide cancellation forms... refund within 10 business days.",
+    "notes_for_llm": "Applies only if signed at home/temporary site; if immediate start is requested, obtain waiver or delay; watch stricter state laws."
+  }
+]

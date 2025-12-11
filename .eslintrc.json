@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "extends": ["next/core-web-vitals"],
+  "ignorePatterns": [
+    "src/app/(admin)/**",
+    "src/app/[locale]/(admin)/**",
+    "src/app/[locale]/(default)/(console)/**",
+    "src/app/[locale]/(default)/i/**",
+    "src/app/[locale]/auth/**",
+    "src/components/blocks/**",
+    "src/components/dashboard/**",
+    "src/components/console/**",
+    "src/contexts/app.tsx",
+    "src/hooks/useOneTapLogin.tsx"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "src/app/*/(admin)/**/*.tsx",
+        "src/app/*/(default)/(console)/**/*.tsx",
+        "src/app/*/(default)/i/**/*.tsx",
+        "src/app/*/(default)/posts/**/*.tsx",
+        "src/components/locale/toggle.tsx"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": "off",
+        "react/display-name": "off",
+        "@next/next/no-img-element": "off",
+        "jsx-a11y/alt-text": "off"
+      }
+    }
+  ]
+}

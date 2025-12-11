@@ -1,0 +1,236 @@
+[
+  {
+    "id": "cleaning_001",
+    "service_type": "cleaning",
+    "clause_type": "services",
+    "title": "Optional cleaning task checklist",
+    "short_summary": "Clarifies scope by checkbox items such as vacuum/mop, dusting, windows, dishes, laundry, bathrooms, plus an Other field for agreed additions.",
+    "normalized_clause_en": "Provider will deliver only the tasks checked in the scope list, such as vacuuming and mopping, dusting, window cleaning, dishwashing, laundry, and bathroom cleaning. Any additional tasks must be listed in an “Other” field or appendix and agreed by both parties.",
+    "risk_level": "low",
+    "tags": ["scope_of_work", "housekeeping", "task_list"],
+    "source": {
+      "url": "https://eforms.com/images/2019/08/Cleaning-Service-Contract-Sample-1.pdf",
+      "page_title": "Cleaning Service Contract Sample 1",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "SERVICES: Contractor will perform the house cleaning services described below (check all that apply): Vacuuming and mopping... Dusting... Window cleaning... Washing dishes... Laundry... Bathroom cleaning... Other: ______",
+    "notes_for_llm": "Keep task list explicit; require mutual sign-off for the “Other” line; add frequency/standards if needed."
+  },
+  {
+    "id": "cleaning_002",
+    "service_type": "cleaning",
+    "clause_type": "services",
+    "title": "Scheduling for one-time or recurring work",
+    "short_summary": "Covers start/finish dates and daily hours for one-time jobs, or start date, frequency, weekday, and time window for recurring visits.",
+    "normalized_clause_en": "Services may be one-time or recurring. For one-time work, parties set a start and substantial completion date, with work performed between specified daily hours. For recurring work, parties set a start date and frequency (e.g., weekly/biweekly) and the weekday and time window for each visit. Time is of the essence for scheduled windows.",
+    "risk_level": "low",
+    "tags": ["schedule", "recurring_service", "time_window"],
+    "source": {
+      "url": "https://eforms.com/images/2019/08/Cleaning-Service-Contract-Sample-1.pdf",
+      "page_title": "Cleaning Service Contract Sample 1",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "The Services shall be commenced on or before ___ and substantially completed by ___. OR completed ___ (e.g. weekly, biweekly...) on [day of the week] between __ a.m. and __ p.m.",
+    "notes_for_llm": "Add lateness/reschedule rules to reduce disputes; can tie to access requirements."
+  },
+  {
+    "id": "cleaning_003",
+    "service_type": "cleaning",
+    "clause_type": "services",
+    "title": "Who provides equipment and supplies",
+    "short_summary": "States whether the client supplies tools/products or the provider brings their own, and lists items if client-provided.",
+    "normalized_clause_en": "Parties will designate whether Client supplies cleaning tools/products or Provider brings its own. If Client supplies items, the list will be specified. If Provider supplies, Provider will furnish suitable equipment and supplies.",
+    "risk_level": "low",
+    "tags": ["equipment", "supplies", "responsibility"],
+    "source": {
+      "url": "https://eforms.com/images/2019/08/Cleaning-Service-Contract-Sample-1.pdf",
+      "page_title": "Cleaning Service Contract Sample 1",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "EQUIPMENT: Owner shall provide the following equipment... ☐ - When performing the Services, Contractor will use his/her own equipment.",
+    "notes_for_llm": "Capture allergy/green-product requests and fragile surfaces if relevant."
+  },
+  {
+    "id": "cleaning_004",
+    "service_type": "cleaning",
+    "clause_type": "payment",
+    "title": "One-time or recurring billing and payment method",
+    "short_summary": "Allows a flat price for one-time jobs or per-week/month/visit pricing for recurring work, and describes payment timing/method.",
+    "normalized_clause_en": "Client will pay either a flat fee of $___ for one-time services or $___ per [week/month/visit] for ongoing services. The payment schedule and method (e.g., after each visit, weekly, or at completion) will be described. Late or missed payments may affect scheduling.",
+    "risk_level": "medium",
+    "tags": ["pricing", "payment_schedule", "recurring_fee"],
+    "source": {
+      "url": "https://eforms.com/images/2019/08/Cleaning-Service-Contract-Sample-1.pdf",
+      "page_title": "Cleaning Service Contract Sample 1",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "Owner shall pay... the sum of ___ Dollars ($___)... OR... the sum of ___ Dollars ($___) per ___ (week, month, per session...). The payment(s) shall be paid in the following manner: ___",
+    "notes_for_llm": "Consider adding late fees/suspension triggers and invoicing cadence to avoid ambiguity."
+  },
+  {
+    "id": "cleaning_005",
+    "service_type": "cleaning",
+    "clause_type": "payment",
+    "title": "Reimbursable extra expenses",
+    "short_summary": "Limits which expenses client will reimburse; if none, state none.",
+    "normalized_clause_en": "Client will reimburse only the expenses expressly listed (e.g., parking, disposal fees, specialty supplies). If no reimbursements are allowed, the agreement will state “none.” Provider will document reimbursable costs.",
+    "risk_level": "low",
+    "tags": ["expenses", "reimbursement", "limits"],
+    "source": {
+      "url": "https://eforms.com/images/2019/08/Cleaning-Service-Contract-Sample-1.pdf",
+      "page_title": "Cleaning Service Contract Sample 1",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "OTHER EXPENSES: Owner shall reimburse Contractor for the following expenses only: ___ (If none, write “none.”)",
+    "notes_for_llm": "Keep expense scope clear; require preapproval and receipts for transparency."
+  },
+  {
+    "id": "cleaning_006",
+    "service_type": "cleaning",
+    "clause_type": "damage_liability",
+    "title": "Workmanlike standard and insurance",
+    "short_summary": "Work must be in a workmanlike manner by licensed individuals where required; provider carries insurance for injuries/damages from its acts.",
+    "normalized_clause_en": "Work will be performed in a workmanlike manner and, where required, by properly licensed individuals. Provider represents it carries adequate insurance for injuries to its personnel and third parties arising from Provider’s acts.",
+    "risk_level": "low",
+    "tags": ["insurance", "licensing", "workmanlike_standard"],
+    "source": {
+      "url": "https://eforms.com/images/2019/08/Cleaning-Service-Contract-Sample-1.pdf",
+      "page_title": "Cleaning Service Contract Sample 1",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "All work shall be completed in a workmanship like manner... To the extent required by law all work shall be performed by individuals duly licenses... Contractor warrants that it is adequately insured...",
+    "notes_for_llm": "Optionally add proof-of-coverage, liability caps, and client duty to disclose fragile items."
+  },
+  {
+    "id": "cleaning_007",
+    "service_type": "cleaning",
+    "clause_type": "payment",
+    "title": "Right to suspend for nonpayment",
+    "short_summary": "If client misses scheduled payments, provider may stop work until payment or dispute resolution.",
+    "normalized_clause_en": "If Client fails to make any scheduled payment, Provider may suspend work without breach until payment is received or the dispute is resolved. Suspension does not waive Provider’s right to collect amounts due.",
+    "risk_level": "medium",
+    "tags": ["nonpayment", "suspension", "payment_default"],
+    "source": {
+      "url": "https://eforms.com/images/2019/08/Cleaning-Service-Contract-Sample-1.pdf",
+      "page_title": "Cleaning Service Contract Sample 1",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "In the event Owner shall fail to pay any periodic or installment payment due hereunder, Contractor may cease work without breach pending payment or resolution of dispute.",
+    "notes_for_llm": "Service-provider leaning; consider adding notice or grace period for balance."
+  },
+  {
+    "id": "cleaning_008",
+    "service_type": "cleaning",
+    "clause_type": "other",
+    "title": "Force majeure delay",
+    "short_summary": "Provider not liable for delays beyond control (weather, etc.); scheduling will be adjusted in good faith.",
+    "normalized_clause_en": "Provider is not liable for delays caused by circumstances beyond its reasonable control (e.g., severe weather, utility outages, access restrictions). Scheduling will be adjusted in good faith when such delays occur.",
+    "risk_level": "low",
+    "tags": ["force_majeure", "delay", "scheduling"],
+    "source": {
+      "url": "https://eforms.com/images/2019/08/Cleaning-Service-Contract-Sample-1.pdf",
+      "page_title": "Cleaning Service Contract Sample 1",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "Contractor shall not be liable for any delay due to circumstance beyond its control.",
+    "notes_for_llm": "Add reschedule process and termination rights for prolonged delays if needed."
+  },
+  {
+    "id": "cleaning_009",
+    "service_type": "cleaning",
+    "clause_type": "other",
+    "title": "Independent contractor and change orders",
+    "short_summary": "States provider is an independent contractor; changes must be in writing and signed by both parties.",
+    "normalized_clause_en": "Provider acts as an independent contractor, not an employee of Client. Any changes to the agreement or scope must be in writing and signed by both parties.",
+    "risk_level": "low",
+    "tags": ["independent_contractor", "change_order", "governance"],
+    "source": {
+      "url": "https://eforms.com/images/2019/08/Cleaning-Service-Contract-Sample-1.pdf",
+      "page_title": "Cleaning Service Contract Sample 1",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "Contractor is an independent contractor and not an employee of Owner. Any changes to this document must be signed by both Contractor and Owner.",
+    "notes_for_llm": "Align with employment/worker classification laws; can add “no authority to bind client” clause."
+  },
+  {
+    "id": "cleaning_010",
+    "service_type": "cleaning",
+    "clause_type": "services",
+    "title": "Contract essentials and location/product details",
+    "short_summary": "Recommends including effective date, governing state, parties’ info, detailed services, equipment/products, all addresses/dates, liability/insurance info, and term.",
+    "normalized_clause_en": "The agreement should state the effective date, governing state, full legal names and contacts of both parties, and a detailed description of services including equipment/products used, all service locations, and scheduled dates. Liability and insurance information and contract duration should also be included to avoid disputes over methods or materials.",
+    "risk_level": "low",
+    "tags": ["contract_basics", "governing_law", "service_description", "insurance_info"],
+    "source": {
+      "url": "https://templatelab.com/cleaning-contract/",
+      "page_title": "41 Printable Cleaning Contract Templates (100% Free)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "how_to_guide"
+    },
+    "source_quote": "The contract needs the effective date, the state, party information, description of the cleaning services... equipment used... cleaning locations... cleaning dates... liability and insurance information... duration of the contract...",
+    "notes_for_llm": "Use as a structural checklist to ensure major sections are covered."
+  },
+  {
+    "id": "cleaning_011",
+    "service_type": "cleaning",
+    "clause_type": "cancellations",
+    "title": "Cancellation fee must be disclosed and agreed",
+    "short_summary": "A cancellation fee applies only if disclosed and accepted in advance (contract or continued use after notice); otherwise the client may not owe it.",
+    "normalized_clause_en": "Any cancellation fee applies only if disclosed and agreed in advance. The agreement should state the fee amount, when it triggers (e.g., notice given < ___ hours), and that continued use after notice of the policy constitutes acceptance. Without such agreement, no cancellation fee is due.",
+    "risk_level": "medium",
+    "tags": ["cancellation_fee", "disclosure", "notice_requirement"],
+    "source": {
+      "url": "https://forum.freeadvice.com/threads/cleaning-service-cancellation-fee-the-first-ive-heard-of-it.71834/",
+      "page_title": "Cleaning Service Cancellation Fee - The First I've Heard of It",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "You are probably not liable... only if provided by contract... or if after that they had notified you of the requirement and you had agreed to it...",
+    "notes_for_llm": "Remind to obtain written confirmation; comply with local consumer protection rules."
+  },
+  {
+    "id": "cleaning_012",
+    "service_type": "cleaning",
+    "clause_type": "cancellations",
+    "title": "3-day cooling-off right for door-to-door/temporary sales (FTC)",
+    "short_summary": "If sold at a residence (≥$25) or temporary location (≥$130), client may cancel until midnight of the third business day; provider must give cancellation notice/form and refund within 10 business days.",
+    "normalized_clause_en": "For sales made at the Client’s residence (≥ $25) or at a temporary location (≥ $130), Client may cancel the sale without penalty until midnight of the third business day after the sale. Provider must give written notice of this right and a cancellation form at signing, and must refund payments within 10 business days upon timely cancellation.",
+    "risk_level": "high",
+    "tags": ["cooling_off_rule", "door_to_door", "cancellation_right", "ftc"],
+    "source": {
+      "url": "https://www.ftc.gov/legal-library/browse/rules/cooling-rule",
+      "page_title": "FTC Cooling-Off Rule (16 CFR Part 429)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "regulation"
+    },
+    "source_quote": "Consumers who buy goods or services at their homes... can cancel within three business days... Sellers must tell buyers about their cancellation rights and provide cancellation forms. Sellers must refund within 10 business days.",
+    "notes_for_llm": "Applies to door-to-door/temporary-location sales; if work starts within the period, obtain written waiver or delay start; state laws may be stricter."
+  },
+  {
+    "id": "cleaning_013",
+    "service_type": "cleaning",
+    "clause_type": "cancellations",
+    "title": "Cooling-off rule key exemptions",
+    "short_summary": "Cooling-off generally doesn’t apply to mail/phone orders, sales below $25 at home or $130 at temporary sites, emergency repairs requested by customer, or insurance/securities/real estate.",
+    "normalized_clause_en": "The three-day cooling-off right generally does not apply to mail or phone orders, sales under $25 at a residence or under $130 at a temporary location, emergency home repairs requested by the customer when follow-up goods or services are added, or to insurance, securities, or real estate transactions.",
+    "risk_level": "medium",
+    "tags": ["cooling_off_exemptions", "thresholds", "emergency_repairs"],
+    "source": {
+      "url": "https://www.ftc.gov/legal-library/browse/rules/cooling-rule",
+      "page_title": "FTC Cooling-Off Rule (16 CFR Part 429)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "regulation"
+    },
+    "source_quote": "The Rule doesn’t cover sales under $25 at home... under $130 at temporary locations... doesn’t cover mail or telephone orders, real estate, insurance, securities, or emergency home repairs you ask for...",
+    "notes_for_llm": "Clarify exemptions to avoid misapplication; still good to document emergency repair requests and whether client waives cooling-off."
+  }
+]

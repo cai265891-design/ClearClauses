@@ -57,46 +57,6 @@
     "show_happy_users": false,
     "show_badge": false
   },
-  "branding": {
-    "title": "ShipAny is built on the shoulders of giants",
-    "items": [
-      {
-        "title": "Next.js",
-        "image": {
-          "src": "/imgs/logos/nextjs.svg",
-          "alt": "Next.js"
-        }
-      },
-      {
-        "title": "React",
-        "image": {
-          "src": "/imgs/logos/react.svg",
-          "alt": "React"
-        }
-      },
-      {
-        "title": "TailwindCSS",
-        "image": {
-          "src": "/imgs/logos/tailwindcss.svg",
-          "alt": "TailwindCSS"
-        }
-      },
-      {
-        "title": "Shadcn/UI",
-        "image": {
-          "src": "/imgs/logos/shadcn.svg",
-          "alt": "Shadcn/UI"
-        }
-      },
-      {
-        "title": "Vercel",
-        "image": {
-          "src": "/imgs/logos/vercel.svg",
-          "alt": "Vercel"
-        }
-      }
-    ]
-  },
   "introduce": {
     "name": "introduce",
     "title": "Why service pros use this instead of random templates",
@@ -145,7 +105,7 @@
     "description": "",
     "items": [
       {
-        "title": "Step 1 · Describe your service in your own words",
+        "title": "Describe your service in your own words",
         "description": "Start with a simple sentence: “bi-weekly house cleaning for 2-bedroom apartments”, “weekly lawn mowing and edging”, or “overnight pet sitting for small dogs”. The assistant turns that into a structured brief for your contract.",
         "icon": "RiSpeakLine",
         "image": {
@@ -153,7 +113,7 @@
         }
       },
       {
-        "title": "Step 2 · Get a full draft contract in under 5 minutes",
+        "title": "Get a full draft contract in under 5 minutes",
         "description": "You instantly get a complete service agreement for your type of work, including services provided, fees, cancellations, damage and fragile items, pets and safety, and access and keys—plus side-by-side explanations in plain English.",
         "icon": "RiFileList3Line",
         "image": {
@@ -161,7 +121,7 @@
         }
       },
       {
-        "title": "Step 3 · Fine-tune specific clauses with a helper",
+        "title": "Fine-tune specific clauses with a helper",
         "description": "Want stricter same-day cancellation rules? Need a clear limit for fragile items? Click “I need to modify…” on any clause, describe what you want, and the assistant rewrites just that section while keeping the rest of your contract intact.",
         "icon": "RiEditLine",
         "image": {
@@ -201,27 +161,27 @@
     "items": [
       {
         "title": "Fits home & pet care work",
-        "description": "Templates: Usually generic and not written for cleaning, lawn care, or pet services. Generic AI: Depends on your prompt; often drifts into vague or irrelevant legal language. This tool: Built specifically for small home & pet care service providers.",
+        "description": "Templates: Generic legal forms, not built for cleaning, pet, or lawn jobs. Generic AI: Prompt-dependent; drifts off-topic. This tool: Built for home & pet care work.",
         "icon": "RiHomeLine"
       },
       {
         "title": "Easy to understand",
-        "description": "Templates: Dense legal text only. Generic AI: Explanations buried in chat. This tool: Side-by-side contract text and plain-English explanations for every key clause.",
+        "description": "Templates: Dense legal text, no plain explainers. Generic AI: Explanations buried in chat. This tool: Side-by-side clause + plain-English note.",
         "icon": "RiBookOpenLine"
       },
       {
         "title": "Source & reliability",
-        "description": "Templates: Unknown authors or freshness. Generic AI: Often hallucinated. This tool: Uses structured prompts and industry best-practice snippets with source notes.",
+        "description": "Templates: Author and age unknown. Generic AI: Can hallucinate. This tool: Structured prompts with cited snippets.",
         "icon": "RiCheckboxMultipleBlankLine"
       },
       {
         "title": "Time to first usable draft",
-        "description": "Templates: Fast to download, slow to adapt. Generic AI: Multiple retries for consistency. This tool: Usually under 5 minutes from description to ready-to-edit draft.",
+        "description": "Templates: Fast download, manual rewrite. Generic AI: Needs retries for consistency. This tool: Under 5 minutes to an editable draft.",
         "icon": "RiTimer2Line"
       },
       {
         "title": "Cost",
-        "description": "Templates: Free but risky. Generic AI: Included in AI subscriptions with hit-or-miss quality. This tool: Free to generate and review; pay only when you download.",
+        "description": "Templates: Free, risk on you. Generic AI: Included in AI plan, quality swings. This tool: Free to generate/review; pay when you download.",
         "icon": "RiMoneyDollarCircleLine"
       }
     ]

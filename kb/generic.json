@@ -1,0 +1,74 @@
+[
+  {
+    "id": "generic_001",
+    "service_type": "generic",
+    "clause_type": "cancellations",
+    "title": "Cancellation policy essentials",
+    "short_summary": "Include notice window (commonly 24–48h), late-cancel fee (fixed or %), accepted cancellation channels, and client signature/acknowledgment.",
+    "normalized_clause_en": "A cancellation policy should specify: the notice window to cancel without penalty (commonly 24–48 hours), the late-cancellation charge (fixed fee or % of service), how to contact to cancel (email/phone/text), and require client acknowledgement/signature so the fee can be enforced.",
+    "risk_level": "low",
+    "tags": ["cancellation_policy", "notice_period", "contact_methods", "signature"],
+    "source": {
+      "url": "https://www.getjobber.com/academy/company-cancellation-policy-template-and-examples/",
+      "page_title": "How to Create a Cancellation Policy (Templates + Examples)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "how_to_guide"
+    },
+    "source_quote": "every cancellation policy template should include... timeframe... 24 to 48-hour notice... late cancellation penalty... contact information... place for a signature.",
+    "notes_for_llm": "Adjust time windows and amounts to industry/locale; signature/acceptance is key for enforceability."
+  },
+  {
+    "id": "generic_002",
+    "service_type": "generic",
+    "clause_type": "cancellations",
+    "title": "Short template for fixed rebooking fee",
+    "short_summary": "Template: late cancellations (≤X hours) pay $Y; cancellations earlier than X hours via specified channels are penalty-free.",
+    "normalized_clause_en": "Template: “Cancellations made [48 hours] or less before an appointment will be subject to a [rebooking fee of $___]. Cancellations made via [email/phone/text] sooner than [48 hours] before an appointment will be processed without penalty.”",
+    "risk_level": "low",
+    "tags": ["template", "rebooking_fee", "short_notice"],
+    "source": {
+      "url": "https://www.getjobber.com/academy/company-cancellation-policy-template-and-examples/",
+      "page_title": "How to Create a Cancellation Policy (Templates + Examples)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "how_to_guide"
+    },
+    "source_quote": "Cancellations made [48 hours] or less before an appointment will be subject to a [rebooking fee of $50]... Cancellations made via [email] sooner than [48 hours]... processed without penalty.",
+    "notes_for_llm": "Replace placeholders with actual hours/fee; place on quotes/contracts/booking page."
+  },
+  {
+    "id": "generic_003",
+    "service_type": "generic",
+    "clause_type": "cancellations",
+    "title": "Percentage-based late cancellation",
+    "short_summary": "Late cancellations/no-shows/access failures can be charged a % of service fee (e.g., 50%) within the notice window.",
+    "normalized_clause_en": "“Cancellations made [48 hours] or less before an appointment will be charged [half of the service rate]. This includes appointments where the provider is unable to access the property, is turned away, or the client is a no-show.”",
+    "risk_level": "medium",
+    "tags": ["percentage_fee", "no_show", "access_failure"],
+    "source": {
+      "url": "https://www.getjobber.com/academy/company-cancellation-policy-template-and-examples/",
+      "page_title": "How to Create a Cancellation Policy (Templates + Examples)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "how_to_guide"
+    },
+    "source_quote": "charged... [half of the service rate]. This includes appointments where our service provider is unable to access the property, is turned away, or the client is a no-show.",
+    "notes_for_llm": "Percentage fees can feel harsh for residential; consider fixed fees or one-time waiver."
+  },
+  {
+    "id": "generic_004",
+    "service_type": "generic",
+    "clause_type": "cancellations",
+    "title": "FTC 3-day cooling-off scope and duties",
+    "short_summary": "For door-to-door/temporary sales meeting thresholds, client can cancel within 3 business days; seller must give notice/form and refund within 10 business days.",
+    "normalized_clause_en": "For door-to-door or temporary-location sales meeting FTC thresholds (≥ $25 at a residence; ≥ $130 at a temporary location), Client may cancel until midnight of the third business day after the sale. Provider must supply written notice of this right and a cancellation form at signing, and refund payments within 10 business days if Client cancels within that period.",
+    "risk_level": "high",
+    "tags": ["cooling_off_rule", "door_to_door", "cancellation_right", "ftc"],
+    "source": {
+      "url": "https://www.ftc.gov/legal-library/browse/rules/cooling-rule",
+      "page_title": "FTC Cooling-Off Rule (16 CFR Part 429)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "regulation"
+    },
+    "source_quote": "Consumers who buy goods or services at their homes... can cancel within three business days... provide cancellation forms... refund within 10 business days.",
+    "notes_for_llm": "Only triggers for home/temporary-site sales; if service starts immediately, get waiver or delay start; state law may be stricter."
+  }
+]

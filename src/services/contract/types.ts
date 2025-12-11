@@ -76,6 +76,20 @@ export interface KbItem {
   source_type: string;
   enabled: boolean;
   last_reviewed_at?: string;
+  clause_type?: string;
+  title?: string;
+  short_summary?: string;
+  normalized_clause_en?: string;
+  risk_level?: string;
+  tags?: string[];
+  source?: {
+    url?: string;
+    page_title?: string;
+    retrieved_at?: string;
+    content_type?: string;
+  };
+  source_quote?: string;
+  notes_for_llm?: string;
 }
 
 export interface GenerateOptions {

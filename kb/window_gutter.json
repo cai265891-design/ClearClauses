@@ -1,0 +1,146 @@
+[
+  {
+    "id": "window_gutter_001",
+    "service_type": "window_gutter",
+    "clause_type": "cancellations",
+    "title": "48-hour cancellation and scope reduction fees",
+    "short_summary": "If client cancels with <48 hours’ notice, a $50 fee applies; reducing booked scope within 48 hours may add a fee.",
+    "normalized_clause_en": "If Client cancels with less than 48 hours’ notice, a $50 cancellation fee applies. Reducing the booked scope within 48 hours (e.g., switching from interior/exterior to exterior-only) may incur an additional fee.",
+    "risk_level": "medium",
+    "tags": ["cancellation_fee", "short_notice", "scope_change"],
+    "source": {
+      "url": "https://www.sunshinewindowgutter.com/client-contract",
+      "page_title": "Client Contract — Sunshine Window Cleaning",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "If you cancel your appointment with less than 48 hours notice there will be a $50 cancellation fee... changing from an interior/exterior clean to an exterior only clean",
+    "notes_for_llm": "Consider a one-time waiver for goodwill; ensure disclosure upfront to comply with consumer rules."
+  },
+  {
+    "id": "window_gutter_002",
+    "service_type": "window_gutter",
+    "clause_type": "other",
+    "title": "Weather rescheduling policy",
+    "short_summary": "If rain/freezing forecast prevents service, provider may reschedule and will notify the day before or morning of the job.",
+    "normalized_clause_en": "If forecasted rain or freezing conditions prevent safe service, Provider may reschedule. Provider will contact Client the day before or morning of the job to arrange a new date.",
+    "risk_level": "low",
+    "tags": ["weather", "reschedule", "safety"],
+    "source": {
+      "url": "https://www.sunshinewindowgutter.com/client-contract",
+      "page_title": "Client Contract — Sunshine Window Cleaning",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "If the forecast calls for rain or is below freezing we may have to reschedule your appointment... we will be in contact the day before or morning of the clean",
+    "notes_for_llm": "Add priority rescheduling or refunds for prolonged weather delays if desired."
+  },
+  {
+    "id": "window_gutter_003",
+    "service_type": "window_gutter",
+    "clause_type": "damage_liability",
+    "title": "Limited liability for pre-existing issues",
+    "short_summary": "Provider not liable for damage during normal operation of items with pre-existing issues; client should disclose defects.",
+    "normalized_clause_en": "Provider is not liable for damage occurring during normal operation of existing client property (e.g., blinds or storm windows with pre-existing issues). Client will inform Provider of any known defects so extra care can be taken.",
+    "risk_level": "medium",
+    "tags": ["liability", "preexisting_condition", "disclosure"],
+    "source": {
+      "url": "https://www.sunshinewindowgutter.com/client-contract",
+      "page_title": "Client Contract — Sunshine Window Cleaning",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "we are not liable for any damages that incur during the normal operation... please let the crew know if they need to be aware of any existing issues with the windows, blinds, or screens",
+    "notes_for_llm": "Balance with liability for provider negligence; optionally add pre/post photo documentation."
+  },
+  {
+    "id": "window_gutter_004",
+    "service_type": "window_gutter",
+    "clause_type": "pets_safety",
+    "title": "Pet isolation for interior work",
+    "short_summary": "Client should isolate pets that might escape or be skittish/aggressive during interior cleaning and coordinate room access.",
+    "normalized_clause_en": "For interior work, Client will secure pets that may escape or be skittish/aggressive. Client will coordinate room access so pets remain isolated while work is performed.",
+    "risk_level": "low",
+    "tags": ["pets", "access", "safety"],
+    "source": {
+      "url": "https://www.sunshinewindowgutter.com/client-contract",
+      "page_title": "Client Contract — Sunshine Window Cleaning",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "If you have any pets that may be tempted to take advantage... isolate the pet... If you have pets that may be aggressive or skittish... keep them isolated",
+    "notes_for_llm": "If isolation is not possible, set expectations for reschedule/wait charges or refusal."
+  },
+  {
+    "id": "window_gutter_005",
+    "service_type": "window_gutter",
+    "clause_type": "services",
+    "title": "Scope exclusions and special debris pricing",
+    "short_summary": "Lists tasks not provided (pressure/roof washing, exterior gutter scrubbing, repairs, etc.) and notes construction debris/hard water may change price.",
+    "normalized_clause_en": "Provider focuses on window and gutter cleaning and does not perform pressure or roof washing, exterior gutter scrubbing, dusting, fixture cleaning, gutter installs/repairs, pest removal, or other non-listed tasks. Post-construction debris or hard water staining may increase the price and will be discussed before proceeding.",
+    "risk_level": "low",
+    "tags": ["scope_exclusions", "upsell_review", "post_construction"],
+    "source": {
+      "url": "https://www.sunshinewindowgutter.com/client-contract",
+      "page_title": "Client Contract — Sunshine Window Cleaning",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "tasks that we leave up to other experts... If construction debris is present it may affect the price... hard water stains require a special product",
+    "notes_for_llm": "Clear exclusions prevent mismatched expectations; pre-quote special stains when possible."
+  },
+  {
+    "id": "window_gutter_006",
+    "service_type": "window_gutter",
+    "clause_type": "other",
+    "title": "Callback/redo time limit",
+    "short_summary": "Client must report dissatisfaction within 48 hours; no callbacks after that window.",
+    "normalized_clause_en": "If Client is unhappy with the work, they must notify Provider within 48 hours of service. After that window, no callbacks will be scheduled.",
+    "risk_level": "medium",
+    "tags": ["callback", "defect_notice", "time_limit"],
+    "source": {
+      "url": "https://www.sunshinewindowgutter.com/client-contract",
+      "page_title": "Client Contract — Sunshine Window Cleaning",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "If you are unhappy with the work please let us know within 48 hours. We will not attend callbacks after that period.",
+    "notes_for_llm": "Optionally extend or offer one courtesy redo; ensure compliance with local warranty/consumer rules."
+  },
+  {
+    "id": "window_gutter_007",
+    "service_type": "window_gutter",
+    "clause_type": "services",
+    "title": "Arrival window expectations",
+    "short_summary": "Arrival window is a time range, not a guaranteed start/finish time; client should expect arrival within that range.",
+    "normalized_clause_en": "Provider may give an arrival window for the crew; this is a range for arrival, not a guarantee of start-and-finish times. Client should expect arrival anytime within the stated window.",
+    "risk_level": "low",
+    "tags": ["arrival_window", "scheduling_expectations"],
+    "source": {
+      "url": "https://www.sunshinewindowgutter.com/client-contract",
+      "page_title": "Client Contract — Sunshine Window Cleaning",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "Arrival Window: ... expect the crew to arrive in that time period.",
+    "notes_for_llm": "Can add late-arrival notice or small credit if severely delayed."
+  },
+  {
+    "id": "window_gutter_008",
+    "service_type": "window_gutter",
+    "clause_type": "cancellations",
+    "title": "3-day cooling-off for door-to-door/temporary sales (FTC)",
+    "short_summary": "If sold at a residence (≥$25) or temporary site (≥$130), client may cancel until midnight of the third business day; provider must give notice/form and refund within 10 business days.",
+    "normalized_clause_en": "For sales made at the Client’s residence (≥ $25) or a temporary location (≥ $130), Client may cancel until midnight of the third business day. Provider must give written notice of this right and a cancellation form at signing, and refund payments within 10 business days after a timely cancellation.",
+    "risk_level": "high",
+    "tags": ["cooling_off_rule", "door_to_door", "cancellation_right", "ftc"],
+    "source": {
+      "url": "https://www.ftc.gov/legal-library/browse/rules/cooling-rule",
+      "page_title": "FTC Cooling-Off Rule (16 CFR Part 429)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "regulation"
+    },
+    "source_quote": "Consumers who buy goods or services at their homes... can cancel within three business days... provide cancellation forms... refund within 10 business days.",
+    "notes_for_llm": "Applies only if contract signed at home/temporary site; if immediate start is needed, obtain written waiver or delay start; check stricter state rules."
+  }
+]

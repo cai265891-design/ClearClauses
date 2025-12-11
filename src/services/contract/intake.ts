@@ -20,6 +20,13 @@ export async function runContractIntake(params: IntakeParams): Promise<{
   const model = params.model || process.env.LLM_INTAKE_MODEL || "gpt-5-mini";
   const logger = createLogger("contract-intake");
 
+  logger.log("info", "intake request received", {
+    locale,
+    defaultCurrency,
+    model,
+    userDescription,
+  });
+
   const userPrompt = `You will receive a short free-text description of a specific job or client situation.
 Use it to fill in the brief and field_confidence according to the system instructions.
 
@@ -72,6 +79,7 @@ Do not add any extra text.`;
     logger.log("info", "intake parse success", {
       is_supported: validated.is_supported_service_agreement,
       next_action: validated.next_action,
+      missing_critical_fields: validated.missing_critical_fields,
     });
     return {
       result: validated,

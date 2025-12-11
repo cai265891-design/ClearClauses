@@ -1,0 +1,200 @@
+[
+  {
+    "id": "lawn_001",
+    "service_type": "lawn_care",
+    "clause_type": "services",
+    "title": "Lawn and yard task list",
+    "short_summary": "Lists tasks such as leaf raking, mowing, limb trimming, fertilizer, watering, pest control, and weeding; work is limited to defined areas.",
+    "normalized_clause_en": "Provider will perform only the lawn/yard tasks agreed, which may include leaf raking, lawn mowing, trimming overgrown limbs, fertilizer application, watering, pest control, and weeding of beds/walkways. Work is limited to the areas described in the contract; tasks outside those areas are excluded unless added by written amendment.",
+    "risk_level": "low",
+    "tags": ["scope_of_work", "yard_maintenance", "limitations"],
+    "source": {
+      "url": "https://templatelab.com/lawn-care-contract/",
+      "page_title": "40 Professional Lawn Care Contract Templates (FREE)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "how_to_guide"
+    },
+    "source_quote": "A lawn care provider may provide any or all the following duties... They must work only within the places defined by the landscape contract.",
+    "notes_for_llm": "Add service frequency and debris/grass clipping handling to reduce scope disputes."
+  },
+  {
+    "id": "lawn_002",
+    "service_type": "lawn_care",
+    "clause_type": "services",
+    "title": "Timelines and service frequency",
+    "short_summary": "States start date, total duration, completion date for one-time jobs, or recurring frequency/weekday/time window for ongoing work.",
+    "normalized_clause_en": "The agreement will state the start date, expected duration, and completion date for one-time projects, or the recurring frequency (e.g., weekly, biweekly, seasonal) with the weekday/time window for each visit. Time is of the essence for scheduled windows.",
+    "risk_level": "low",
+    "tags": ["schedule", "recurring_service", "timeline"],
+    "source": {
+      "url": "https://templatelab.com/lawn-care-contract/",
+      "page_title": "40 Professional Lawn Care Contract Templates (FREE)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "how_to_guide"
+    },
+    "source_quote": "The contract timelines... When the contract is expected to start... total duration... completion date... Seasonal contracts... Long term lawn maintenance contract.",
+    "notes_for_llm": "Include weather reschedule rules; clarify premium for peak-season/weekend windows if any."
+  },
+  {
+    "id": "lawn_003",
+    "service_type": "lawn_care",
+    "clause_type": "payment",
+    "title": "Installments, milestones, and payment methods",
+    "short_summary": "Breaks down total cost, deposits, progress payments, final payment, and acceptable payment methods.",
+    "normalized_clause_en": "Payment terms will specify total price, any upfront deposit, milestone or progress payments, and final payment timing. It will also state whether payment is lump sum or installments and the accepted methods (transfer, check, cash, online).",
+    "risk_level": "medium",
+    "tags": ["payment_terms", "deposit", "milestones"],
+    "source": {
+      "url": "https://templatelab.com/lawn-care-contract/",
+      "page_title": "40 Professional Lawn Care Contract Templates (FREE)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "how_to_guide"
+    },
+    "source_quote": "The terms of payment give details... initial payment?... payment after certain amount of work... final payment... mode of payment – bank transfer, check, cash, online payments.",
+    "notes_for_llm": "Add late fee/suspension terms; residential clients may expect a grace period."
+  },
+  {
+    "id": "lawn_004",
+    "service_type": "lawn_care",
+    "clause_type": "services",
+    "title": "Change-order process for scope increases",
+    "short_summary": "If scope is larger than quoted or client adds tasks, changes and price adjustments must be documented before proceeding.",
+    "normalized_clause_en": "If Provider discovers the quoted scope is materially greater than expected, or Client requests additional work, both parties will discuss and document scope and price changes through the agreed amendment procedure before proceeding.",
+    "risk_level": "low",
+    "tags": ["change_order", "scope_change", "pricing_adjustment"],
+    "source": {
+      "url": "https://templatelab.com/lawn-care-contract/",
+      "page_title": "40 Professional Lawn Care Contract Templates (FREE)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "how_to_guide"
+    },
+    "source_quote": "There should be an allowance that details the procedures that must be followed before such amendments become effected... the scope of work can be adjusted and the cost changed.",
+    "notes_for_llm": "Consider default hourly/line-item rates for added tasks; require client sign-off."
+  },
+  {
+    "id": "lawn_005",
+    "service_type": "lawn_care",
+    "clause_type": "cancellations",
+    "title": "Remedies for non-delivery or cancellation",
+    "short_summary": "Use contract, invoices, and statement of work as evidence; set notice requirements and fees/proration for remaining services.",
+    "normalized_clause_en": "If either party fails to deliver, the other may rely on the contract, invoices, and statement of work to seek resolution. The contract should state cancellation terms, including notice requirements and any fees or prorated refunds for remaining services.",
+    "risk_level": "medium",
+    "tags": ["cancellation", "remedies", "evidence"],
+    "source": {
+      "url": "https://templatelab.com/lawn-care-contract/",
+      "page_title": "40 Professional Lawn Care Contract Templates (FREE)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "how_to_guide"
+    },
+    "source_quote": "What to do if one party fails to deliver?... Invoice template... The statement of work... Terms of contract cancellations.",
+    "notes_for_llm": "Define notice days, peak-season cancellation fee, and how completed work is valued."
+  },
+  {
+    "id": "lawn_006",
+    "service_type": "lawn_care",
+    "clause_type": "other",
+    "title": "Client responsibilities and materials",
+    "short_summary": "Client may need to supply or fund materials (fertilizer, pesticides) and ensure access.",
+    "normalized_clause_en": "Client responsibilities may include supplying or paying for agreed materials such as pesticides or fertilizer and ensuring property access. The contract will state each party’s roles so Provider is not responsible for items Client agreed to furnish.",
+    "risk_level": "low",
+    "tags": ["client_responsibilities", "materials", "access"],
+    "source": {
+      "url": "https://templatelab.com/lawn-care-contract/",
+      "page_title": "40 Professional Lawn Care Contract Templates (FREE)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "how_to_guide"
+    },
+    "source_quote": "It provides details on role/s to be played by the property owner. For example, purchase of pesticides, fertilizers, and payments.",
+    "notes_for_llm": "If client fails to supply materials, include reschedule or price adjustment rules."
+  },
+  {
+    "id": "lawn_007",
+    "service_type": "lawn_care",
+    "clause_type": "services",
+    "title": "Defined service area and access",
+    "short_summary": "List all service addresses/areas; provider works only within them; client ensures access (gate codes, pets).",
+    "normalized_clause_en": "The contract will list all service locations and specific areas to be maintained. Provider will perform only within those boundaries. Client will ensure access (e.g., gate codes, pet constraints) during scheduled windows.",
+    "risk_level": "low",
+    "tags": ["service_area", "access", "boundaries"],
+    "source": {
+      "url": "https://templatelab.com/lawn-care-contract/",
+      "page_title": "40 Professional Lawn Care Contract Templates (FREE)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "how_to_guide"
+    },
+    "source_quote": "They must work only within the places defined by the landscape contract... if there is more than one building... all the addresses where work is done need to be listed.",
+    "notes_for_llm": "Add no-access handling (wait fee or reschedule) if gates/pets block entry."
+  },
+  {
+    "id": "lawn_008",
+    "service_type": "lawn_care",
+    "clause_type": "cancellations",
+    "title": "Early termination loss of discount (community practice)",
+    "short_summary": "If client ends term early, completed work is repriced at non-discounted rates and next 30 days scheduled services are payable.",
+    "normalized_clause_en": "If Client cancels before the agreed term ends (other than for documented non-performance), Client will owe all completed services repriced at the standard non-discounted rates plus payment for the next 30 days of scheduled services. Any bundled contract discount is void upon early cancellation.",
+    "risk_level": "medium",
+    "tags": ["early_termination", "cancellation_fee", "pricing_adjustment"],
+    "source": {
+      "url": "https://www.lawnsite.com/threads/cancellation-fee-written-into-contract.436162/",
+      "page_title": "Cancellation fee written into contract?",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "canceling prior to the end... pay the non contract rate... pay for all services completed... AND for the next thirty days in advance",
+    "notes_for_llm": "Reframe as “discounts void on early termination” to avoid punitive wording; allow exemptions for provider non-performance."
+  },
+  {
+    "id": "lawn_009",
+    "service_type": "lawn_care",
+    "clause_type": "payment",
+    "title": "Installments vs. prepaid seasonal scope",
+    "short_summary": "Clarifies that monthly/seasonal payments are installments toward a front-loaded seasonal scope, not cancel-anytime monthly service.",
+    "normalized_clause_en": "Monthly or seasonal payments are installments toward the full seasonal scope, not a month-to-month service that can be stopped at will. Client acknowledges heavy front-loaded work and agrees that early termination does not erase amounts owed for completed front-loaded tasks.",
+    "risk_level": "medium",
+    "tags": ["installments", "front_loaded_work", "expectations"],
+    "source": {
+      "url": "https://www.lawnsite.com/threads/cancellation-fee-written-into-contract.436162/",
+      "page_title": "Cancellation fee written into contract?",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "payment installment rather than monthly service fee... spring months are front loaded... most of your work happened May-July",
+    "notes_for_llm": "State explicitly that installments represent a seasonal package; consider an initial visit surcharge to align value."
+  },
+  {
+    "id": "lawn_010",
+    "service_type": "lawn_care",
+    "clause_type": "other",
+    "title": "Non-punitive pricing on early exit",
+    "short_summary": "Avoid “penalty” wording; instead remove contract discounts and revert completed/upcoming services to standard à-la-carte rates.",
+    "normalized_clause_en": "To discourage mid-season cancellations without sounding punitive, the agreement may state that bundled contract discounts apply only if the term is completed; early termination reverts all completed and upcoming services to the standard a la carte rates, which may exceed the contract pricing.",
+    "risk_level": "medium",
+    "tags": ["customer_relations", "pricing_strategy", "discount_reversal"],
+    "source": {
+      "url": "https://www.lawnsite.com/threads/cancellation-fee-written-into-contract.436162/",
+      "page_title": "Cancellation fee written into contract?",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "voiding... any in contract discount... pay at the stated standard rate",
+    "notes_for_llm": "Model can present this as discount reversal, not a penalty; still check local consumer rules."
+  },
+  {
+    "id": "lawn_011",
+    "service_type": "lawn_care",
+    "clause_type": "cancellations",
+    "title": "3-day cooling-off for door-to-door/temporary sales (FTC)",
+    "short_summary": "If sold at a residence (≥$25) or temporary location (≥$130), client may cancel until midnight of the third business day; provider must give notice/form and refund within 10 business days.",
+    "normalized_clause_en": "For door-to-door or temporary-location sales meeting the FTC thresholds (≥ $25 at a residence; ≥ $130 at a temporary location), Client may cancel until midnight of the third business day after the sale. Provider must give written notice of this right and a cancellation form at signing, and must refund payments within 10 business days upon timely cancellation.",
+    "risk_level": "high",
+    "tags": ["cooling_off_rule", "door_to_door", "cancellation_right", "ftc"],
+    "source": {
+      "url": "https://www.ftc.gov/legal-library/browse/rules/cooling-rule",
+      "page_title": "FTC Cooling-Off Rule (16 CFR Part 429)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "regulation"
+    },
+    "source_quote": "Consumers who buy goods or services at their homes... can cancel within three business days... Sellers must tell buyers about their cancellation rights and provide cancellation forms. Sellers must refund within 10 business days.",
+    "notes_for_llm": "Applies when contract is signed at the home/temporary site; if work starts immediately, obtain written waiver or delay start; check stricter state rules."
+  }
+]

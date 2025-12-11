@@ -1,0 +1,110 @@
+[
+  {
+    "id": "pool_001",
+    "service_type": "pool",
+    "clause_type": "payment",
+    "title": "Monthly prepay and liquidated damages for nonpayment",
+    "short_summary": "Client prepays monthly; if not paid before first visit, contract may terminate and client owes one month of service or $25/week as liquidated damages.",
+    "normalized_clause_en": "Client pays the monthly pool service fee in advance each month. If advance payment is not received before the first scheduled visit, services may terminate and Client will owe liquidated damages equal to one additional month of service or $25 per week (whichever is less), in addition to any unpaid fees.",
+    "risk_level": "medium",
+    "tags": ["prepayment", "liquidated_damages", "nonpayment"],
+    "source": {
+      "url": "https://www.jspoolsandspas.com/wp-content/uploads/2019/04/JS-Pool-Service-Agreement3.pdf",
+      "page_title": "JS Pools & Spas Pool Service Agreement",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "Customer agrees to pay... monthly in advance... If the card on file does not cover payment... services will be postponed and... liquidated damages... $25 per week or one additional month’s service fee, whichever is less.",
+    "notes_for_llm": "Service-provider leaning; ensure liquidated damages comply with local limits or convert to suspension plus discount reversal."
+  },
+  {
+    "id": "pool_002",
+    "service_type": "pool",
+    "clause_type": "services",
+    "title": "Service frequency, skips, and holidays",
+    "short_summary": "Weekly service (option for twice weekly). Provider may skip up to five weeks/year for weather/illness/holidays; no service Thanksgiving, Christmas, and one summer week; no credits.",
+    "normalized_clause_en": "Standard service is once per week on the designated day, with an option for twice-weekly at extra cost. Provider may skip up to five weeks per year for weather, illness, or holidays and does not service during Thanksgiving week, Christmas week, and one summer week; these skips are priced into the monthly fee, so no credits apply.",
+    "risk_level": "medium",
+    "tags": ["schedule", "holiday_skip", "no_credit"],
+    "source": {
+      "url": "https://www.jspoolsandspas.com/wp-content/uploads/2019/04/JS-Pool-Service-Agreement3.pdf",
+      "page_title": "JS Pools & Spas Pool Service Agreement",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "provide pool service once a week... may postpone... not to exceed 5 weeks each year... no service during the weeks of Thanksgiving and Christmas... already accounted for... no credit is due.",
+    "notes_for_llm": "Clearly disclose blackout weeks; consider offering make-up service for long weather gaps."
+  },
+  {
+    "id": "pool_003",
+    "service_type": "pool",
+    "clause_type": "services",
+    "title": "No credit when access blocked",
+    "short_summary": "Client must provide access; if provider cannot access, that week’s service is skipped with no credit/refund.",
+    "normalized_clause_en": "Client will ensure access (gate codes, locks, security clearance, pets secured) on the scheduled day. If Provider cannot access the pool/spa area, that week’s service is skipped and no credit or refund is due.",
+    "risk_level": "medium",
+    "tags": ["access", "no_show", "no_credit"],
+    "source": {
+      "url": "https://www.jspoolsandspas.com/wp-content/uploads/2019/04/JS-Pool-Service-Agreement3.pdf",
+      "page_title": "JS Pools & Spas Pool Service Agreement",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "If JPS is unable to access the service area for any reason, services will not be performed that week and Customer shall not be entitled to a credit.",
+    "notes_for_llm": "Consider a one-time courtesy reschedule or wait-fee option to improve client acceptance."
+  },
+  {
+    "id": "pool_004",
+    "service_type": "pool",
+    "clause_type": "services",
+    "title": "Included services and extra labor pricing",
+    "short_summary": "Includes vacuum/skimming, basket cleaning, brushing, water test/balance, equipment check; filter cleaning billed separately every 4 months; extra debris billed per 15 minutes.",
+    "normalized_clause_en": "Weekly service includes vacuuming/skimming as needed, cleaning baskets, brushing surfaces, backwashing filters as needed, testing/balancing water, and inspecting equipment. Filter cleanings are billed separately every four months. Storm cleanup or excessive debris beyond normal scope is billed in 15-minute increments at the stated rate.",
+    "risk_level": "low",
+    "tags": ["scope_of_work", "extra_charges", "maintenance"],
+    "source": {
+      "url": "https://www.jspoolsandspas.com/wp-content/uploads/2019/04/JS-Pool-Service-Agreement3.pdf",
+      "page_title": "JS Pools & Spas Pool Service Agreement",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "services each week: Pool vacuumed... skimmed... baskets cleaned... equipment inspected... water tested and balanced... Filter cleaning is NOT included... additional labor charges... $18 per each additional 15 mins.",
+    "notes_for_llm": "Set clear pricing for filter cleaning and storm cleanups; align rates with local market."
+  },
+  {
+    "id": "pool_005",
+    "service_type": "pool",
+    "clause_type": "other",
+    "title": "Disclaimer and client duties",
+    "short_summary": "Provider not responsible for acts of nature or normal deterioration; client must maintain water level and follow recommendations between visits.",
+    "normalized_clause_en": "Provider is not responsible for damage from acts of nature, vandalism, misuse, or normal equipment deterioration from chemicals/sun/salt. Client must maintain proper water level and act on recommended maintenance; Provider is not liable for issues caused by Client’s failure to follow recommendations between visits.",
+    "risk_level": "medium",
+    "tags": ["liability", "client_responsibility", "exclusions"],
+    "source": {
+      "url": "https://www.jspoolsandspas.com/wp-content/uploads/2019/04/JS-Pool-Service-Agreement3.pdf",
+      "page_title": "JS Pools & Spas Pool Service Agreement",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "JPS shall not be responsible for any damage to property due to acts of nature... normal deterioration... CUSTOMER is responsible for maintaining correct water level... JPS is not responsible for any damages... caused by failure of a Customer to perform other services recommended by JPS",
+    "notes_for_llm": "Balance with liability for provider negligence; encourage documenting water level notices."
+  },
+  {
+    "id": "pool_006",
+    "service_type": "pool",
+    "clause_type": "cancellations",
+    "title": "3-day cooling-off for door-to-door/temporary sales (FTC)",
+    "short_summary": "If sold at a residence (≥$25) or temporary site (≥$130), client may cancel until midnight of the third business day; provider must give notice/form and refund within 10 business days.",
+    "normalized_clause_en": "For door-to-door or temporary-location sales meeting FTC thresholds (≥ $25 at a residence; ≥ $130 at a temporary location), Client may cancel until midnight of the third business day after the sale. Provider must give written notice of this right and a cancellation form at signing and refund within 10 business days if Client cancels within the period.",
+    "risk_level": "high",
+    "tags": ["cooling_off_rule", "door_to_door", "cancellation_right", "ftc"],
+    "source": {
+      "url": "https://www.ftc.gov/legal-library/browse/rules/cooling-rule",
+      "page_title": "FTC Cooling-Off Rule (16 CFR Part 429)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "regulation"
+    },
+    "source_quote": "Consumers who buy goods or services at their homes... can cancel within three business days... Sellers must tell buyers about their cancellation rights and provide cancellation forms. Sellers must refund within 10 business days.",
+    "notes_for_llm": "Applies when contract is signed at home/temporary site; if immediate start is needed, obtain written waiver or delay start; check state rules."
+  }
+]

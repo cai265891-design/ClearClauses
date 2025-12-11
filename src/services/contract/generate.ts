@@ -11,6 +11,65 @@ interface GenerateParams {
   model?: string;
 }
 
+const DEFAULT_GENERATE_TIMEOUT_MS = 120_000;
+
+function resolveGenerateTimeoutMs() {
+  const parsed = Number(process.env.LLM_GENERATE_TIMEOUT_MS);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : DEFAULT_GENERATE_TIMEOUT_MS;
+}
+
+function validateReferences(
+  doc: ContractDocument,
+  kbItems: KbItem[],
+  options: GenerateOptions,
+) {
+  const kbIdSet = new Set(kbItems.map((k) => k.id));
+  const referenceIds = new Set<string>();
+  doc.clauses.forEach((clause) => {
+    clause.reference_ids.forEach((id) => referenceIds.add(id));
+    clause.explanation.kb_ids_used.forEach((id) => {
+      if (!clause.reference_ids.includes(id)) {
+        throw new Error(`kb_ids_used missing in reference_ids for clause ${clause.clause_id}`);
+      }
+    });
+  });
+
+  const footnoteIds = new Set(doc.footnotes.map((f) => f.id));
+
+  // When references are required, ensure at least one is present and all are valid/covered.
+  const referencesRequired = (options.include_references ?? true) && kbItems.length > 0;
+  if (referencesRequired) {
+    if (referenceIds.size === 0) {
+      throw new Error("references required when kb_items provided with include_references=true");
+    }
+    referenceIds.forEach((id) => {
+      if (!kbIdSet.has(id)) {
+        throw new Error(`reference id ${id} not found in provided kb_items`);
+      }
+      if (!footnoteIds.has(id)) {
+        throw new Error(`footnote missing for reference id ${id}`);
+      }
+    });
+    doc.footnotes.forEach((footnote) => {
+      if (!kbIdSet.has(footnote.id)) {
+        throw new Error(`footnote id ${footnote.id} not found in provided kb_items`);
+      }
+    });
+  } else {
+    // Even if references not required, keep sanity: no invented ids outside kb_items.
+    referenceIds.forEach((id) => {
+      if (!kbIdSet.has(id)) {
+        throw new Error(`reference id ${id} not found in provided kb_items`);
+      }
+    });
+    doc.footnotes.forEach((footnote) => {
+      if (!kbIdSet.has(footnote.id)) {
+        throw new Error(`footnote id ${footnote.id} not found in provided kb_items`);
+      }
+    });
+  }
+}
+
 export async function runContractGenerate(params: GenerateParams): Promise<{
   contract: ContractDocument;
   traceId: string;
@@ -19,6 +78,7 @@ export async function runContractGenerate(params: GenerateParams): Promise<{
   const { brief, kbItems, options = {} } = params;
   const model = params.model || process.env.LLM_GENERATE_MODEL || "gpt-5.1-2025-11-13";
   const logger = createLogger("contract-generate");
+  const timeoutMs = resolveGenerateTimeoutMs();
 
   const optionsWithDefaults: GenerateOptions = {
     locale: options.locale ?? "en-US",
@@ -26,15 +86,23 @@ export async function runContractGenerate(params: GenerateParams): Promise<{
     include_references: options.include_references ?? true,
   };
 
+  logger.log("info", "generate request received", {
+    model,
+    brief,
+    options: optionsWithDefaults,
+    kb_item_ids: kbItems.map((k) => k.id),
+    timeout_ms: timeoutMs,
+  });
+
   const userPrompt = `You will receive three JSON objects:
 - "brief": the structured configuration of this service agreement.
 - "options": flags controlling explanations and references.
 - "kb_items": zero or more knowledge items summarizing common business practices.
 
 Use:
-- brief as the single source of truth for what the contract should say.
-- kb_items only to enrich explanations and reference footnotes,
-  following the system instructions.
+- brief as the source of truth for explicit inputs.
+- kb_items to add common-practice defaults and supportive references,
+  but never override explicit details from the brief.
 
 Input:
 
@@ -69,16 +137,19 @@ Do not add any extra text.`;
       response_format: { type: "json_object" },
     },
     "contract-generate",
+    timeoutMs,
   );
 
   logger.log("info", "generate completion received", {
     traceId: completion.traceId,
     content: completion.content,
+    model,
   });
 
   try {
     const parsed = JSON.parse(completion.content || "{}");
     const validated = contractDocumentSchema.parse(parsed);
+    validateReferences(validated, kbItems, optionsWithDefaults);
     logger.log("info", "generate parse success", {
       clauses: validated.clauses.length,
       footnotes: validated.footnotes.length,

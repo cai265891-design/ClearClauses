@@ -39,7 +39,7 @@ export default function Header({ header }: { header: HeaderType }) {
   }
 
   return (
-    <section className="py-3">
+    <section className="sticky top-0 z-50 py-3 backdrop-blur-md bg-white/30 supports-[backdrop-filter]:bg-white/25 border-b border-black/5">
       <div className="container">
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6">

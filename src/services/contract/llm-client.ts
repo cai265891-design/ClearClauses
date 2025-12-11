@@ -54,8 +54,6 @@ export async function callChatCompletion<T = unknown>(
       signal: controller.signal,
     });
 
-    clearTimeout(timeout);
-
     if (!res.ok) {
       const errorText = await res.text();
       logger.log("error", "LLM 请求失败", {
@@ -81,9 +79,19 @@ export async function callChatCompletion<T = unknown>(
       traceId: logger.traceId,
     };
   } catch (error) {
-    logger.log("error", "LLM 请求异常", {
-      error: (error as Error).message,
-    });
+    const err = error as Error;
+    const isAbortError = err.name === "AbortError" || err.message === "This operation was aborted";
+    const meta = {
+      error: err.message,
+      timeout_ms: timeoutMs,
+    };
+    if (isAbortError) {
+      logger.log("error", "LLM 请求超时", meta);
+      throw new Error(`LLM 请求超时（>${timeoutMs}ms）`);
+    }
+    logger.log("error", "LLM 请求异常", meta);
     throw error;
+  } finally {
+    clearTimeout(timeout);
   }
 }

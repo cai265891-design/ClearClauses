@@ -1,0 +1,218 @@
+[
+  {
+    "id": "pet_sitting_001",
+    "service_type": "pet_sitting",
+    "clause_type": "services",
+    "title": "Independent contractor responsibilities",
+    "short_summary": "States sitter is an independent contractor responsible for own insurance/taxes and will provide attentive, reliable service; client supplies needed info.",
+    "normalized_clause_en": "Provider is engaged as an independent contractor and is responsible for all insurance and tax obligations. Provider will perform agreed services in an attentive and reliable manner, and Client will supply necessary information and instructions to support performance.",
+    "risk_level": "low",
+    "tags": ["independent_contractor", "responsibilities", "expectations"],
+    "source": {
+      "url": "https://www.free-legal-document.com/pet-sitting-contract.html",
+      "page_title": "Free Pet Sitting Contract and Veterinary Release Form",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "The Owner retains the services of the Sitter as an Independent Contractor... perform the agreed-on services in an attentive, reliable and caring manner... Owner undertakes to provide all necessary information to assist in this performance.",
+    "notes_for_llm": "Generic IC positioning; check worker-classification rules; add caveat if uncertain."
+  },
+  {
+    "id": "pet_sitting_002",
+    "service_type": "pet_sitting",
+    "clause_type": "payment",
+    "title": "Service fee, deposit, and reimbursable expenses",
+    "short_summary": "Sets a fixed fee, reimbursement for necessary supplies/emergencies with receipts, requires partial prepayment and balance shortly after invoice.",
+    "normalized_clause_en": "Client will pay Provider a service fee of $___ for the booking. Client will reimburse necessary out-of-pocket costs (e.g., food, litter, cleaning supplies, transport, emergency care) with submitted receipts. A deposit of $___ is due upfront, and any remaining balance is payable within 3 days of receiving the final invoice.",
+    "risk_level": "medium",
+    "tags": ["payment", "expenses", "deposit"],
+    "source": {
+      "url": "https://www.free-legal-document.com/pet-sitting-contract.html",
+      "page_title": "Free Pet Sitting Contract and Veterinary Release Form",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "The Sitter shall be paid the amount of $____... Additional fees may include... receipts... payable in advance and payment of the balance within 3 days...",
+    "notes_for_llm": "Adjust timing to local consumer rules; clarify deposit/refundability."
+  },
+  {
+    "id": "pet_sitting_003",
+    "service_type": "pet_sitting",
+    "clause_type": "term_termination",
+    "title": "Service term, extensions, and holdover care",
+    "short_summary": "Defines start/end dates, allows extensions, and permits per-day or per-visit charges if sitter must continue care due to delayed return.",
+    "normalized_clause_en": "Services run from [start date] through [end date]. Any extension requires Client request and Provider acceptance. If Client does not return or confirm coverage by the end date, Provider may continue visits in the pet’s interest at $___ per day or $___ per visit until Client resumes care.",
+    "risk_level": "medium",
+    "tags": ["term", "extension", "holdover"],
+    "source": {
+      "url": "https://www.free-legal-document.com/pet-sitting-contract.html",
+      "page_title": "Free Pet Sitting Contract and Veterinary Release Form",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "terminate on the _____day... may be extended... Any additional visits or duties shall be calculated at $________ per day or $______ per visit.",
+    "notes_for_llm": "Ensure rates and authorization clear to avoid disputes; good for delayed travel scenarios."
+  },
+  {
+    "id": "pet_sitting_004",
+    "service_type": "pet_sitting",
+    "clause_type": "cancellations",
+    "title": "Cancellation, substitute, and aggressive pet handling",
+    "short_summary": "Either party may cancel with 72h notice; 30% fee for late/holiday cancellations; sitter may appoint substitute with approval; if pet aggressive, sitter may transfer/board and end services.",
+    "normalized_clause_en": "Either party may cancel with at least 72 hours’ notice before the first visit. Late cancellations or cancellations during peak/holiday periods may incur a 30% fee unless due to severe weather, death in the family, or medical emergency. If Provider must cancel within 72 hours, Provider may propose a qualified substitute subject to Client approval. If a pet becomes aggressive, Provider may transfer care to a designated guardian or boarding facility at Client’s expense and may end services, with no refund for services already performed.",
+    "risk_level": "high",
+    "tags": ["cancellation_policy", "late_fee", "aggressive_pet", "substitute"],
+    "source": {
+      "url": "https://www.free-legal-document.com/pet-sitting-contract.html",
+      "page_title": "Free Pet Sitting Contract and Veterinary Release Form",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "Either party may terminate... minimum of 72... cancellation during recognized holiday periods will result in a 30% cancellation fee... appoint a substitute... Should any pet become aggressive... arrange with the pet's Guardian... or place... into a kennel... at the Owner's expense...",
+    "notes_for_llm": "Fee/boarding rights are strict; consider softer options and state law limits."
+  },
+  {
+    "id": "pet_sitting_005",
+    "service_type": "pet_sitting",
+    "clause_type": "damage_liability",
+    "title": "Liability allocation for property, pet injuries, and sitter injury",
+    "short_summary": "Sitter carries liability insurance but not liable when others access property, pets unsupervised outdoors, or during transport; client covers medical costs from pet-caused injury to sitter.",
+    "normalized_clause_en": "Provider will maintain liability insurance for services. Provider is not liable for security breaches, loss, or damage when third parties have property access, nor for incidents involving pets with unsupervised outdoor access or during transport. Client is responsible for medical costs and damages arising from pet-caused injury to Provider and for vet/boarding costs authorized for the pet.",
+    "risk_level": "medium",
+    "tags": ["liability", "property_damage", "pet_injury"],
+    "source": {
+      "url": "https://www.free-legal-document.com/pet-sitting-contract.html",
+      "page_title": "Free Pet Sitting Contract and Veterinary Release Form",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "The Sitter will carry liability insurance... accepts no liability for any breach of security... not be liable for any mishap... caused by a pet who has unsupervised access to the outdoors... Owner shall be liable for all medical expenses and damages resulting from an injury to the Sitter caused by the pet...",
+    "notes_for_llm": "One-sided; consider mutual negligence standard or caps for balance."
+  },
+  {
+    "id": "pet_sitting_006",
+    "service_type": "pet_sitting",
+    "clause_type": "pets_safety",
+    "title": "Emergency veterinary authorization",
+    "short_summary": "Sitter may seek vet care/transport if client unreachable in emergency; client pays costs.",
+    "normalized_clause_en": "In an emergency, Provider will attempt to reach Client. If unreachable, Provider may transport pets to the listed veterinarian or an emergency clinic and request on-site treatment as needed. Client is responsible for resulting costs.",
+    "risk_level": "low",
+    "tags": ["emergency", "veterinary_care", "authority"],
+    "source": {
+      "url": "https://www.free-legal-document.com/pet-sitting-contract.html",
+      "page_title": "Free Pet Sitting Contract and Veterinary Release Form",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "If the Owner cannot be reached... Transport the pet(s) to the listed veterinarian; Request on-site treatment... Transport the pet(s) to an emergency clinic...",
+    "notes_for_llm": "Add spending caps or contact order for clarity."
+  },
+  {
+    "id": "pet_sitting_007",
+    "service_type": "pet_sitting",
+    "clause_type": "access_keys",
+    "title": "Key and access code security",
+    "short_summary": "Sitter will safeguard keys/remotes/codes/personal info and return them on demand or at end of services.",
+    "normalized_clause_en": "Provider will safeguard all keys, remotes, gate codes, and personal information received from Client and will return them immediately on request or at the end of services.",
+    "risk_level": "low",
+    "tags": ["access", "keys", "security"],
+    "source": {
+      "url": "https://www.free-legal-document.com/pet-sitting-contract.html",
+      "page_title": "Free Pet Sitting Contract and Veterinary Release Form",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "keep safe and confidential all keys, remote control entry devices, access codes... return same... at the end... or on demand.",
+    "notes_for_llm": "Add lost-key procedure and liability limits if needed."
+  },
+  {
+    "id": "pet_sitting_008",
+    "service_type": "pet_sitting",
+    "clause_type": "payment",
+    "title": "Compensation basis and cadence",
+    "short_summary": "Sets rate and cadence (hourly/daily/monthly) paid via sitter’s preferred account; changes require mutual agreement.",
+    "normalized_clause_en": "Client will pay Provider [amount] in [currency] on an [hourly/daily/weekly/monthly] basis at the agreed rate, via Provider’s designated payment method. Any changes to rate or cadence require mutual agreement.",
+    "risk_level": "low",
+    "tags": ["rate", "payment_method", "frequency"],
+    "source": {
+      "url": "https://www.pandadoc.com/pet-sitting-contract-template/",
+      "page_title": "Pet Sitting Contract Template | Free Template Download",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "compensate the Pet Sitter the amount of _(amount figures)_ in _(currency)_ on an _(hourly, daily, or monthly)_ basis... through the Pet Sitter’s preferred account.",
+    "notes_for_llm": "Align with deposits and overtime rules elsewhere in the contract."
+  },
+  {
+    "id": "pet_sitting_009",
+    "service_type": "pet_sitting",
+    "clause_type": "services",
+    "title": "Scope of pet care services",
+    "short_summary": "Includes feeding/water, waste cleanup, walk/exercise/play, meds per vet advice, vet/groom visits, waste disposal.",
+    "normalized_clause_en": "Provider will perform the following services for listed pets: feed and refresh water; clean waste and maintain pet areas; walk, exercise, and play; administer medications per veterinary direction; take pets to veterinary checkups or grooming as needed; and properly dispose of waste.",
+    "risk_level": "low",
+    "tags": ["scope_of_work", "pet_care", "medication"],
+    "source": {
+      "url": "https://www.pandadoc.com/pet-sitting-contract-template/",
+      "page_title": "Pet Sitting Contract Template | Free Template Download",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "Care and Services... Feeding pet(s)... Clean up waste... Walk, exercise, and play... Vet visit for checkup and grooming... Administer medications... Proper disposal of pet(s) waste materials",
+    "notes_for_llm": "Tailor to visit cadence; state exclusions (e.g., off-leash)."
+  },
+  {
+    "id": "pet_sitting_010",
+    "service_type": "pet_sitting",
+    "clause_type": "pets_safety",
+    "title": "Pet health disclosures and emergency contacts",
+    "short_summary": "Client provides vaccinations, allergies, temperament, routine, and emergency contacts including vet; sitter calls client first, then contacts/vet.",
+    "normalized_clause_en": "Client will supply current pet details (name, breed, sex, spay/neuter status, vaccinations with dates, deworming, allergies, temperament, exercise routine, and medical card info). Client will list emergency contacts and veterinarian with phone, email, and address. Provider will attempt to reach Client first in emergencies, then listed contacts and the veterinarian if Client is unavailable.",
+    "risk_level": "low",
+    "tags": ["pet_health", "disclosure", "emergency_contacts"],
+    "source": {
+      "url": "https://www.pandadoc.com/pet-sitting-contract-template/",
+      "page_title": "Pet Sitting Contract Template | Free Template Download",
+      "retrieved_at": "2025-12-10",
+      "content_type": "sample_contract"
+    },
+    "source_quote": "Pet Information... Vaccinated... Allergies... Temperament... Exercise Routine... Emergency Contact(s)... notify first... if the Pet Owner is unavailable, notify these individuals and the pet(s) veterinarian.",
+    "notes_for_llm": "Keep health data private; ensure vaccination info is current."
+  },
+  {
+    "id": "pet_sitting_011",
+    "service_type": "pet_sitting",
+    "clause_type": "cancellations",
+    "title": "Cancellation protection deductible",
+    "short_summary": "If a cancellation protection plan applies, a fixed deductible per approved claim is withheld from payout; no charge if claim denied.",
+    "normalized_clause_en": "If a cancellation protection plan applies, Client acknowledges a fixed deductible of $___ per approved cancellation claim. The deductible is withheld from any payout; if a claim is denied, no deductible is charged. Qualifying events and claim steps should be documented.",
+    "risk_level": "medium",
+    "tags": ["cancellation_protection", "deductible", "claims_process"],
+    "source": {
+      "url": "https://forum.trustedhousesitters.com/t/about-the-fee-for-cancel-compensation/58843",
+      "page_title": "About the fee for cancel compensation - TrustedHousesitters Community Forum",
+      "retrieved_at": "2025-12-10",
+      "content_type": "clause_examples"
+    },
+    "source_quote": "“The Sitters must contribute $150 towards any payment request made against this Plan.” … “The fee is deducted from the amount you receive. If your claim isn’t successful there’s no fee.”",
+    "notes_for_llm": "Replace amounts with actual plan terms; list covered events and caps to avoid confusion."
+  },
+  {
+    "id": "pet_sitting_012",
+    "service_type": "pet_sitting",
+    "clause_type": "cancellations",
+    "title": "3-day cooling-off for door-to-door/temporary sales (FTC)",
+    "short_summary": "If sold at a residence (≥$25) or temporary site (≥$130), client may cancel until midnight of the third business day; provider must give notice/form and refund within 10 business days.",
+    "normalized_clause_en": "For sales made at the Client’s residence (≥ $25) or at a temporary location (≥ $130), Client may cancel without penalty until midnight of the third business day after the sale. Provider must give written notice of this right and a cancellation form at signing, and must refund payments within 10 business days upon timely cancellation.",
+    "risk_level": "high",
+    "tags": ["cooling_off_rule", "door_to_door", "cancellation_right", "ftc"],
+    "source": {
+      "url": "https://www.ftc.gov/legal-library/browse/rules/cooling-rule",
+      "page_title": "FTC Cooling-Off Rule (16 CFR Part 429)",
+      "retrieved_at": "2025-12-10",
+      "content_type": "regulation"
+    },
+    "source_quote": "Consumers who buy goods or services at their homes... can cancel within three business days... provide cancellation forms... refund within 10 business days.",
+    "notes_for_llm": "Applies if the contract is signed at home/temporary site; if immediate service is needed, obtain waiver or delay; check stricter state laws."
+  }
+]

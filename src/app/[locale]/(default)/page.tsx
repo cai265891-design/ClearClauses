@@ -8,8 +8,8 @@ import Feature3 from "@/components/blocks/feature3";
 import Hero from "@/components/blocks/hero";
 import Pricing from "@/components/blocks/pricing";
 import Showcase from "@/components/blocks/showcase";
-import Stats from "@/components/blocks/stats";
 import Testimonial from "@/components/blocks/testimonial";
+import { InfiniteGridBackground } from "@/components/ui/the-infinite-grid";
 import { getLandingPage } from "@/services/page";
 
 export async function generateMetadata({
@@ -41,14 +41,16 @@ export default async function LandingPage({
 
   return (
     <>
+      <InfiniteGridBackground className="pointer-events-none fixed inset-0 -z-10">
+        <div className="sr-only">background</div>
+      </InfiniteGridBackground>
       {page.hero && <Hero hero={page.hero} />}
       {page.branding && <Branding section={page.branding} />}
       {page.introduce && <Feature1 section={page.introduce} />}
       {page.benefit && <Feature2 section={page.benefit} />}
-      {page.usage && <Feature3 section={page.usage} />}
       {page.feature && <Feature section={page.feature} />}
+      {page.usage && <Feature3 section={page.usage} />}
       {page.showcase && <Showcase section={page.showcase} />}
-      {page.stats && <Stats section={page.stats} />}
       {page.pricing && <Pricing pricing={page.pricing} />}
       {page.testimonial && <Testimonial section={page.testimonial} />}
       {page.faq && <FAQ section={page.faq} />}

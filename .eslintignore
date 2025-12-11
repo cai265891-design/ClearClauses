@@ -1,0 +1,11 @@
+# Legacy/demo sections not in current flow
+src/app/(admin)/**
+src/app/[locale]/(admin)/**
+src/app/[locale]/(default)/(console)/**
+src/app/[locale]/(default)/i/**
+src/app/[locale]/auth/**
+src/components/blocks/**
+src/components/dashboard/**
+src/components/console/**
+src/contexts/app.tsx
+src/hooks/useOneTapLogin.tsx

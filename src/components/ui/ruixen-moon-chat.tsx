@@ -5,11 +5,7 @@ import { useRouter } from "@/i18n/navigation";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import {
-  ArrowUpIcon,
-  Sparkles,
-} from "lucide-react";
-import { AuroraBackground } from "@/components/ui/aurora-background";
+import { ArrowUpIcon, Sparkles } from "lucide-react";
 
 interface AutoResizeProps {
   minHeight: number;
@@ -73,8 +69,8 @@ export default function RuixenMoonChat({
   );
 
   return (
-    <AuroraBackground className="overflow-hidden">
-      <div className="relative z-10 flex w-full max-w-5xl flex-col items-center px-4 text-center">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-transparent text-slate-950 transition-bg">
+      <div className="w-full max-w-5xl text-center relative -translate-y-[30px]">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-xs font-semibold text-neutral-600 shadow-sm ring-1 ring-black/5 backdrop-blur">
           <span className="inline-flex h-6 items-center rounded-full bg-blue-100 px-2 text-blue-700">
             New
@@ -90,7 +86,7 @@ export default function RuixenMoonChat({
 
         <form
           onSubmit={handleSubmit}
-          className="mt-8 w-full max-w-3xl overflow-hidden rounded-[28px] bg-white shadow-[0_20px_80px_-40px_rgba(15,23,42,0.6)] ring-1 ring-black/5"
+          className="mt-8 w-full max-w-3xl mx-auto overflow-hidden rounded-[28px] bg-white shadow-[0_20px_80px_-40px_rgba(15,23,42,0.6)] ring-1 ring-black/5"
         >
           <Textarea
             ref={textareaRef}
@@ -142,6 +138,6 @@ export default function RuixenMoonChat({
           ))}
         </div>
       </div>
-    </AuroraBackground>
+    </div>
   );
 }
