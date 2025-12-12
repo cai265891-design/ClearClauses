@@ -17,6 +17,7 @@ const requestSchema = z.object({
   options: optionsSchema,
   extra_topics: z.array(z.string()).optional(),
   kb_items: z.array(kbItemSchema).optional(), // 允许前端传入已筛选好的 KB（可选）
+  user_description_raw: z.string().optional(),
 });
 
 export async function POST(req: Request) {
@@ -33,6 +34,7 @@ export async function POST(req: Request) {
       brief: parsed.brief,
       options: parsed.options ?? {},
       kbItems,
+      userDescriptionRaw: parsed.user_description_raw,
     });
 
     return respData({

@@ -28,6 +28,20 @@ import type { Brief, ContractClause } from "@/services/contract/types";
 import { toast } from "sonner";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+const CLAUSE_ORDER = [
+  "services",
+  "fees_payment",
+  "schedule_cancellations",
+  "access_safety",
+  "pets_special",
+  "exclusions",
+  "term_termination",
+  "liability_damage",
+  "governing_law_disputes",
+  "general_provisions",
+  "signatures",
+];
+
 interface Props {
   initialDescription?: string;
 }
@@ -48,6 +62,47 @@ const defaultBrief: Brief = {
   service_specific: {},
   custom_terms: [],
 };
+
+function getClauseBadges(clauseId: string, brief?: Brief): string[] {
+  if (!brief) return [];
+  const badges: string[] = [];
+  switch (clauseId) {
+    case "services":
+      if (brief.service_type) badges.push(`Service: ${brief.service_type}`);
+      if (brief.what_service) badges.push(`Scope: ${brief.what_service}`);
+      break;
+    case "fees_payment":
+      if (brief.how_charge_model) badges.push(`Pricing: ${brief.how_charge_model}`);
+      if (brief.how_charge_text) badges.push(brief.how_charge_text);
+      break;
+    case "schedule_cancellations":
+      if (brief.how_often) badges.push(`Frequency: ${brief.how_often}`);
+      if (brief.cancellation_notice_hours !== null) {
+        badges.push(`Notice: ${brief.cancellation_notice_hours}h`);
+      }
+      if (brief.cancellation_fee_policy) {
+        badges.push(`Cancel fee: ${brief.cancellation_fee_policy}`);
+      }
+      break;
+    case "access_safety":
+      if (brief.location_area) badges.push(`Area: ${brief.location_area}`);
+      break;
+    case "pets_special":
+      if (brief.has_pets !== null) badges.push(`Has pets: ${brief.has_pets ? "yes" : "no"}`);
+      break;
+    case "exclusions":
+      if (brief.short_notes) badges.push("Custom notes included");
+      break;
+    case "liability_damage":
+      if (brief.damage_cap_amount !== null) {
+        badges.push(`Damage cap: ${brief.damage_cap_amount} ${brief.damage_cap_currency}`);
+      }
+      break;
+    default:
+      break;
+  }
+  return badges;
+}
 
 function ConfidenceBadge({ score }: { score?: number }) {
   if (score === undefined || score === null) return null;
@@ -314,6 +369,7 @@ function ClauseCard({
   isUpdating,
   isUpdated,
   footnoteMap,
+  badges = [],
 }: {
   clause: ContractClause;
   highlight?: boolean;
@@ -321,6 +377,7 @@ function ClauseCard({
   isUpdating?: boolean;
   isUpdated?: boolean;
   footnoteMap: Record<string, number>;
+  badges?: string[];
 }) {
   return (
     <div
@@ -339,6 +396,15 @@ function ClauseCard({
       <div className="mb-2 flex items-center justify-between gap-2">
         <div className="text-xs font-semibold text-muted-foreground">{clause.title}</div>
         <div className="flex items-center gap-1">
+          {badges.slice(0, 2).map((tag) => (
+            <Badge
+              key={tag}
+              variant="outline"
+              className="text-[11px] font-semibold border-amber-200 bg-amber-50 text-amber-700"
+            >
+              {tag}
+            </Badge>
+          ))}
           {isUpdating && (
             <Badge variant="secondary" className="text-xs font-semibold">
               Updating…
@@ -380,6 +446,7 @@ function ExplanationCard({
   isUpdating,
   isUpdated,
   footnoteMap,
+  badges = [],
 }: {
   clause: ContractClause;
   highlight?: boolean;
@@ -387,6 +454,7 @@ function ExplanationCard({
   isUpdating?: boolean;
   isUpdated?: boolean;
   footnoteMap: Record<string, number>;
+  badges?: string[];
 }) {
   return (
     <div
@@ -405,6 +473,15 @@ function ExplanationCard({
       <div className="mb-2 flex items-center justify-between gap-2">
         <div className="text-xs font-semibold text-muted-foreground">{clause.title}</div>
         <div className="flex items-center gap-1">
+          {badges.slice(0, 2).map((tag) => (
+            <Badge
+              key={tag}
+              variant="outline"
+              className="text-[11px] font-semibold border-amber-200 bg-amber-50 text-amber-700"
+            >
+              {tag}
+            </Badge>
+          ))}
           {isUpdating && (
             <Badge variant="secondary" className="text-xs font-semibold">
               Updating…
@@ -544,6 +621,17 @@ function ContractPageInner({ initialDescription }: Props) {
   const [handleLeft, setHandleLeft] = useState<number | null>(null);
   const stepContainerRef = useRef<HTMLDivElement>(null);
   const hasContractReady = Boolean(contract && status !== "generate_loading");
+  const sortedClauses = useMemo(() => {
+    if (!contract) return [];
+    return [...contract.clauses].sort((a, b) => {
+      const ai = CLAUSE_ORDER.indexOf(a.clause_id);
+      const bi = CLAUSE_ORDER.indexOf(b.clause_id);
+      if (ai === -1 && bi === -1) return a.clause_id.localeCompare(b.clause_id);
+      if (ai === -1) return 1;
+      if (bi === -1) return -1;
+      return ai - bi;
+    });
+  }, [contract]);
   const footnoteMap = useMemo(() => {
     if (!contract) return {};
     const map: Record<string, number> = {};
@@ -552,6 +640,14 @@ function ContractPageInner({ initialDescription }: Props) {
     });
     return map;
   }, [contract]);
+  const signatureClause = useMemo(
+    () => sortedClauses.find((c) => c.clause_id === "signatures"),
+    [sortedClauses],
+  );
+  const clausesWithoutSignature = useMemo(
+    () => sortedClauses.filter((c) => c.clause_id !== "signatures"),
+    [sortedClauses],
+  );
   const setDraft = (patch: Partial<Brief>) => {
     setDraftBrief((prev) => ({ ...prev, ...patch }));
   };
@@ -793,8 +889,6 @@ function ContractPageInner({ initialDescription }: Props) {
       toast.error("We couldn’t update this clause. Please try again.");
     }
   };
-
-  const sortedClauses = useMemo(() => contract?.clauses || [], [contract]);
 
   if (isBlockingLoading) {
     return (
@@ -1085,54 +1179,88 @@ function ContractPageInner({ initialDescription }: Props) {
                     <SkeletonBox />
                   </div>
                 )}
-                {contract && status !== "generate_loading" && (
-                  <>
-                    <div className="rounded-lg border border-dashed bg-white p-3 text-center text-base font-semibold">
-                      {contract.contract_title || "Service Agreement"}
+            {contract && status !== "generate_loading" && (
+              <>
+                <div className="rounded-lg border border-dashed bg-white p-4 text-center text-lg font-semibold uppercase tracking-wide">
+                  {contract.contract_title || "Service Agreement"}
+                </div>
+                <div className="rounded-lg border bg-slate-50 p-4 text-sm text-foreground">
+                  <div className="font-semibold text-foreground">Preamble</div>
+                  <p className="mt-2 whitespace-pre-line leading-6">{contract.preamble}</p>
+                  {contract.governing_note && (
+                    <p className="mt-3 text-xs text-muted-foreground">{contract.governing_note}</p>
+                  )}
+                </div>
+                {clausesWithoutSignature.map((clause) => (
+                  <ClauseCard
+                    key={clause.clause_id}
+                    clause={clause}
+                    highlight={clause.clause_id === selectedClauseId}
+                    onSelect={setSelectedClauseId}
+                    isUpdating={
+                      optimizingClauseId === clause.clause_id && status === "optimize_loading"
+                    }
+                    isUpdated={updatedClauses.has(clause.clause_id)}
+                    footnoteMap={footnoteMap}
+                    badges={getClauseBadges(clause.clause_id, brief)}
+                  />
+                ))}
+                {signatureClause && (
+                  <div className="rounded-lg border bg-white p-4">
+                    <div className="text-sm font-semibold uppercase tracking-wide text-foreground">
+                      Signatures
                     </div>
-                    {sortedClauses.map((clause) => (
-                      <ClauseCard
-                        key={clause.clause_id}
-                        clause={clause}
-                        highlight={clause.clause_id === selectedClauseId}
-                        onSelect={setSelectedClauseId}
-                        isUpdating={
-                          optimizingClauseId === clause.clause_id && status === "optimize_loading"
-                        }
-                        isUpdated={updatedClauses.has(clause.clause_id)}
-                        footnoteMap={footnoteMap}
-                      />
-                    ))}
-                    <div className="rounded-lg border bg-muted/30 p-3">
-                      <div className="text-sm font-semibold text-muted-foreground">Citation Data</div>
-                      <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
-                        {contract.footnotes.map((item, idx) => (
-                          <li
-                            key={item.id}
-                            id={`ref-${item.id}`}
-                            className="flex flex-col gap-1 rounded-md border border-dashed border-slate-200/70 bg-white/70 p-2"
-                          >
-                            <div className="flex items-center gap-2">
-                              <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-semibold text-primary">
-                                KB #{idx + 1}
-                              </span>
-                              <a
-                                href={item.url}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="font-semibold text-primary hover:underline"
-                                title={item.summary}
-                              >
-                                {item.label}
-                              </a>
-                            </div>
-                            <div className="text-xs text-muted-foreground">{item.summary}</div>
-                          </li>
-                        ))}
-                      </ul>
+                    <p className="mt-2 whitespace-pre-line text-sm leading-6 text-foreground">
+                      {signatureClause.body}
+                    </p>
+                    <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                      <div className="flex flex-col gap-2">
+                        <span className="text-xs font-semibold text-muted-foreground">
+                          Provider Signature:
+                        </span>
+                        <div className="h-10 rounded border border-dashed border-slate-300" />
+                        <div className="text-xs text-muted-foreground">Date: __________________</div>
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        <span className="text-xs font-semibold text-muted-foreground">
+                          Client Signature:
+                        </span>
+                        <div className="h-10 rounded border border-dashed border-slate-300" />
+                        <div className="text-xs text-muted-foreground">Date: __________________</div>
+                      </div>
                     </div>
-                  </>
+                  </div>
                 )}
+                <div className="rounded-lg border bg-muted/30 p-3">
+                  <div className="text-sm font-semibold text-muted-foreground">Citation Data</div>
+                  <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
+                    {contract.footnotes.map((item, idx) => (
+                      <li
+                        key={item.id}
+                        id={`ref-${item.id}`}
+                        className="flex flex-col gap-1 rounded-md border border-dashed border-slate-200/70 bg-white/70 p-2"
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-semibold text-primary">
+                            KB #{idx + 1}
+                          </span>
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-semibold text-primary hover:underline"
+                            title={item.summary}
+                          >
+                            {item.label}
+                          </a>
+                        </div>
+                        <div className="text-xs text-muted-foreground">{item.summary}</div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </>
+            )}
                 {!contract && status !== "generate_loading" && (
                   <div className="rounded-lg border border-dashed bg-muted/20 p-4 text-sm text-muted-foreground">
                     No contract yet. Fill the brief above and click “Generate contract”.
@@ -1178,6 +1306,7 @@ function ContractPageInner({ initialDescription }: Props) {
                         isUpdating={optimizingClauseId === clause.clause_id && status === "optimize_loading"}
                         isUpdated={updatedClauses.has(clause.clause_id)}
                         footnoteMap={footnoteMap}
+                        badges={getClauseBadges(clause.clause_id, brief)}
                       />
                     ))}
                 </CardContent>
@@ -1228,7 +1357,7 @@ function ContractPageInner({ initialDescription }: Props) {
                 <SelectValue placeholder="Select a clause to refine" />
               </SelectTrigger>
               <SelectContent>
-                {contract?.clauses.map((c) => (
+                {sortedClauses.map((c) => (
                   <SelectItem key={c.clause_id} value={c.clause_id}>
                     {c.clause_id} – {c.title}
                   </SelectItem>

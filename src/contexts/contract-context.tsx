@@ -35,7 +35,11 @@ interface ContractContextValue {
   kbItems?: KbItem[];
   optimizingClauseId?: string;
   runIntake: (params: { description: string; locale?: string }) => Promise<void>;
-  runGenerate: (params?: { brief?: Brief; options?: GenerateOptions }) => Promise<void>;
+  runGenerate: (params?: {
+    brief?: Brief;
+    options?: GenerateOptions;
+    userDescriptionRaw?: string;
+  }) => Promise<void>;
   runOptimize: (params: { clauseId: string; userNote: string }) => Promise<void>;
   refreshPermission: () => Promise<{ allowed: boolean; reason?: string }>;
   updateBrief: (payload: Partial<Brief>) => void;
@@ -52,6 +56,7 @@ export function ContractProvider({ children }: { children: React.ReactNode }) {
   const [contract, setContract] = useState<ContractDocument>();
   const [kbItems, setKbItems] = useState<KbItem[]>();
   const [optimizingClauseId, setOptimizingClauseId] = useState<string>();
+  const [userDescriptionRaw, setUserDescriptionRaw] = useState<string>();
 
   const runIntake = useCallback(async ({ description, locale }: { description: string; locale?: string }) => {
     setStatus("intake_loading");
@@ -66,6 +71,7 @@ export function ContractProvider({ children }: { children: React.ReactNode }) {
       setFieldConfidence(result.field_confidence);
       setContract(undefined);
       setKbItems(undefined);
+      setUserDescriptionRaw(description);
       if (result.is_supported_service_agreement) {
         setStatus("intake_ready");
       } else {
@@ -78,18 +84,20 @@ export function ContractProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const runGenerate = useCallback(async (params?: { brief?: Brief; options?: GenerateOptions }) => {
+  const runGenerate = useCallback(async (params?: { brief?: Brief; options?: GenerateOptions; userDescriptionRaw?: string }) => {
     const targetBrief = params?.brief || brief;
     if (!targetBrief) {
       setError("brief is required before generating contract");
       return;
     }
+    const targetUserDescriptionRaw = params?.userDescriptionRaw ?? userDescriptionRaw;
     setStatus("generate_loading");
     setError(undefined);
     try {
       const data = await generateContract({
         brief: targetBrief,
         options: params?.options,
+        userDescriptionRaw: targetUserDescriptionRaw,
       });
       setContract(data.contract);
       setKbItems(data.kb_items);
@@ -99,7 +107,7 @@ export function ContractProvider({ children }: { children: React.ReactNode }) {
       setStatus("intake_ready");
       throw err;
     }
-  }, [brief]);
+  }, [brief, userDescriptionRaw]);
 
   const runOptimize = useCallback(
     async ({ clauseId, userNote }: { clauseId: string; userNote: string }) => {

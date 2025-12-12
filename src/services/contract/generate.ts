@@ -9,6 +9,7 @@ interface GenerateParams {
   options?: GenerateOptions;
   kbItems: KbItem[];
   model?: string;
+  userDescriptionRaw?: string;
 }
 
 const DEFAULT_GENERATE_TIMEOUT_MS = 120_000;
@@ -70,12 +71,51 @@ function validateReferences(
   }
 }
 
+function validateStructure(doc: ContractDocument) {
+  const requiredOrder = [
+    "services",
+    "fees_payment",
+    "schedule_cancellations",
+    "access_safety",
+    "pets_special",
+    "exclusions",
+    "term_termination",
+    "liability_damage",
+    "governing_law_disputes",
+    "general_provisions",
+    "signatures",
+  ];
+
+  if (!doc.preamble || !doc.contract_title) {
+    throw new Error("contract_title or preamble is missing");
+  }
+
+  const clauseIdToIndex = new Map<string, number>();
+  doc.clauses.forEach((clause, idx) => clauseIdToIndex.set(clause.clause_id, idx));
+
+  requiredOrder.forEach((id) => {
+    if (!clauseIdToIndex.has(id)) {
+      throw new Error(`missing required clause: ${id}`);
+    }
+  });
+
+  // Ensure order matches requiredOrder
+  let lastIndex = -1;
+  requiredOrder.forEach((id) => {
+    const idx = clauseIdToIndex.get(id) ?? -1;
+    if (idx < lastIndex) {
+      throw new Error("clauses are not in the required order");
+    }
+    lastIndex = idx;
+  });
+}
+
 export async function runContractGenerate(params: GenerateParams): Promise<{
   contract: ContractDocument;
   traceId: string;
   raw: unknown;
 }> {
-  const { brief, kbItems, options = {} } = params;
+  const { brief, kbItems, options = {}, userDescriptionRaw } = params;
   const model = params.model || process.env.LLM_GENERATE_MODEL || "gpt-5.1-2025-11-13";
   const logger = createLogger("contract-generate");
   const timeoutMs = resolveGenerateTimeoutMs();
@@ -91,20 +131,11 @@ export async function runContractGenerate(params: GenerateParams): Promise<{
     brief,
     options: optionsWithDefaults,
     kb_item_ids: kbItems.map((k) => k.id),
+    user_description_raw: userDescriptionRaw,
     timeout_ms: timeoutMs,
   });
 
-  const userPrompt = `You will receive three JSON objects:
-- "brief": the structured configuration of this service agreement.
-- "options": flags controlling explanations and references.
-- "kb_items": zero or more knowledge items summarizing common business practices.
-
-Use:
-- brief as the source of truth for explicit inputs.
-- kb_items to add common-practice defaults and supportive references,
-  but never override explicit details from the brief.
-
-Input:
+  const userPrompt = `Here is the input for this contract generation run.
 
 brief:
 ${JSON.stringify(brief, null, 2)}
@@ -115,14 +146,10 @@ ${JSON.stringify(optionsWithDefaults, null, 2)}
 kb_items:
 ${JSON.stringify(kbItems, null, 2)}
 
-Now:
-1) Decide which clauses you will include.
-2) Use the brief to write clear, neutral contract text for each clause (body).
-3) If options.include_explanations is true, write explanations and business_risk_notes.
-4) If options.include_references is true and kb_items is not empty,
-   connect relevant kb_items to specific clauses using reference_ids and footnotes.
+user_description_raw (optional):
+${userDescriptionRaw ? `"""\n${userDescriptionRaw}\n"""` : "(none provided)"}
 
-Return ONLY the contract JSON object in the exact format described in the system message.
+Follow all system instructions and return ONLY one valid JSON object in the required schema.
 Do not add any extra text.`;
 
   logger.log("info", "generate prompt prepared", { prompt: userPrompt });
@@ -149,6 +176,7 @@ Do not add any extra text.`;
   try {
     const parsed = JSON.parse(completion.content || "{}");
     const validated = contractDocumentSchema.parse(parsed);
+    validateStructure(validated);
     validateReferences(validated, kbItems, optionsWithDefaults);
     logger.log("info", "generate parse success", {
       clauses: validated.clauses.length,

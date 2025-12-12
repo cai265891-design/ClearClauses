@@ -43,6 +43,7 @@ export async function generateContract(params: {
   brief: Brief;
   options?: GenerateOptions;
   extraTopics?: string[];
+  userDescriptionRaw?: string;
 }): Promise<{ contract: ContractDocument; kb_items: KbItem[]; trace_id: string }> {
   const res = await fetch("/api/contract/generate", {
     method: "POST",
@@ -51,6 +52,7 @@ export async function generateContract(params: {
       brief: params.brief,
       options: params.options,
       extra_topics: params.extraTopics,
+      user_description_raw: params.userDescriptionRaw,
     }),
   });
   return handleResponse(res);
