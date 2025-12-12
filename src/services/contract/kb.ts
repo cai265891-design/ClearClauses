@@ -173,7 +173,7 @@ function computeServiceScore(item: KbItem, brief: Brief): number {
 function computeTopicScore(item: KbItem, topics: Set<string>): number {
   if (!topics.size) return 0;
   const itemTopics = [item.topic, item.clause_type, ...(item.tags || [])]
-    .filter(Boolean)
+    .filter((topic): topic is string => Boolean(topic))
     .map((topic) => topic.toLowerCase());
   return itemTopics.some((topic) => topics.has(topic)) ? 0.2 : 0;
 }

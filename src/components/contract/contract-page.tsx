@@ -157,7 +157,6 @@ function SelectField({
   hint,
 }: {
   id: string;
-  label: string;
   value: string;
   onChange: (v: string) => void;
   options: { label: string; value: string }[];
@@ -1110,7 +1109,7 @@ function ContractPageInner({ initialDescription }: Props) {
                 onClick={handleGenerate}
                 disabled={actionLoading}
               >
-                {status === "generate_loading" ? "Generating…" : "Generate contract"}
+                {actionLoading ? "Generating…" : "Generate contract"}
               </Button>
             </div>
           </div>

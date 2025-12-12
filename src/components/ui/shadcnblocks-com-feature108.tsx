@@ -1,6 +1,7 @@
 "use client";
 
 import { type ReactNode } from "react";
+import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -133,9 +134,11 @@ export function Feature108({
                 </div>
                 <div className="relative overflow-hidden rounded-2xl border border-white/70 bg-white/80 shadow-[0_20px_60px_-40px_rgba(15,23,42,0.6)]">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(59,130,246,0.12),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(56,189,248,0.14),transparent_30%)]" />
-                  <img
+                  <Image
                     src={tab.content.imageSrc}
                     alt={tab.content.imageAlt}
+                    width={1200}
+                    height={760}
                     className="relative w-full rounded-2xl object-cover"
                   />
                 </div>

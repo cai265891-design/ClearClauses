@@ -21,8 +21,8 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
   } | null>(null);
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+    const containerEl = containerRef.current;
+    if (!containerEl) return;
 
     const SEPARATION = 140;
     const AMOUNTX = 32;
@@ -33,7 +33,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
     scene.fog = new THREE.Fog(0xf8fafc, 1200, 9000);
 
     const getSize = () => {
-      const rect = container.getBoundingClientRect();
+      const rect = containerEl.getBoundingClientRect();
       return { width: rect.width || window.innerWidth, height: rect.height || window.innerHeight };
     };
     const { width: initialWidth, height: initialHeight } = getSize();
@@ -55,7 +55,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
       height: "100%",
     });
 
-    container.appendChild(renderer.domElement);
+    containerEl.appendChild(renderer.domElement);
 
     // 创建粒子
     const positions: number[] = [];
@@ -90,7 +90,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
     scene.add(points);
 
     let count = 0;
-    let animationId: number;
+    let animationId = 0;
 
     const animate = () => {
       animationId = requestAnimationFrame(animate);
@@ -122,7 +122,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 
     window.addEventListener("resize", handleResize);
     const resizeObserver = new ResizeObserver(handleResize);
-    resizeObserver.observe(container);
+    resizeObserver.observe(containerEl);
 
     animate();
 
@@ -140,19 +140,19 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
       resizeObserver.disconnect();
       if (sceneRef.current) {
         cancelAnimationFrame(sceneRef.current.animationId);
-        sceneRef.current.scene.traverse((object) => {
+        sceneRef.current.scene.traverse((object: THREE.Object3D) => {
           if (object instanceof THREE.Points) {
             object.geometry.dispose();
             if (Array.isArray(object.material)) {
-              object.material.forEach((mat) => mat.dispose());
+              object.material.forEach((mat: THREE.Material) => mat.dispose());
             } else {
               object.material.dispose();
             }
           }
         });
         sceneRef.current.renderer.dispose();
-        if (containerRef.current && sceneRef.current.renderer.domElement) {
-          containerRef.current.removeChild(sceneRef.current.renderer.domElement);
+        if (sceneRef.current.renderer.domElement && containerEl) {
+          containerEl.removeChild(sceneRef.current.renderer.domElement);
         }
       }
     };
