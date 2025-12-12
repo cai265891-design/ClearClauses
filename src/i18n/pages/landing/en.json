@@ -2,50 +2,44 @@
   "template": "shipany-template-one",
   "theme": "light",
   "header": {
-    "brand": {
-      "title": "ShipAny",
-      "logo": {
-        "src": "/logo.png",
-        "alt": "ShipAny"
-      },
-      "url": "/"
+  "brand": {
+    "title": "ClearClauses",
+    "logo": {
+      "src": "/logo.png",
+      "alt": "ClearClauses"
     },
-    "nav": {
-      "items": [
-        {
-          "title": "Features",
-          "url": "/#feature",
-          "icon": "RiSparkling2Line"
-        },
-        {
-          "title": "Pricing",
-          "url": "/pricing",
-          "icon": "RiMoneyDollarCircleLine"
-        },
-        {
-          "title": "Showcase",
-          "url": "/showcase",
-          "icon": "RiApps2Line"
-        },
-        {
-          "title": "Docs",
-          "url": "/docs",
-          "icon": "RiBookOpenLine"
-        }
-      ]
-    },
-    "buttons": [
+    "url": "/"
+  },
+  "nav": {
+    "items": [
       {
-        "title": "Get ShipAny",
-        "url": "https://shipany.ai",
-        "target": "_blank",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
+        "title": "Features",
+        "url": "/#feature",
+        "icon": "RiSparkling2Line"
+      },
+      {
+        "title": "Pricing",
+        "url": "/pricing",
+        "icon": "RiMoneyDollarCircleLine"
+      },
+      {
+        "title": "Templates",
+        "url": "/templates",
+        "icon": "RiLayoutMasonryLine"
       }
-    ],
-    "show_sign": true,
-    "show_theme": true,
-    "show_locale": true
+    ]
+  },
+  "buttons": [
+    {
+      "title": "Login",
+      "url": "/auth/signin",
+      "variant": "default",
+      "icon": "RiLoginCircleLine"
+    }
+  ],
+  "show_sign": false,
+  "show_theme": false,
+  "show_locale": false
   },
   "hero": {
     "title": "5-minute contracts for home service pros",
@@ -189,7 +183,7 @@
   "stats": {
     "name": "stats",
     "label": "Stats",
-    "title": "People Love ShipAny",
+    "title": "People Love ClearClauses",
     "description": "for it's easy to use and fast to ship.",
     "icon": "FaRegHeart",
     "items": [
@@ -258,16 +252,16 @@
   },
   "footer": {
     "name": "footer",
-    "brand": {
-      "title": "ShipAny",
-      "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
-      "logo": {
-        "src": "/logo.png",
-        "alt": "ShipAny"
-      },
-      "url": "/"
+  "brand": {
+    "title": "ClearClauses",
+    "description": "ClearClauses is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
+    "logo": {
+      "src": "/logo.png",
+      "alt": "ClearClauses"
     },
-    "copyright": "© 2025 • ShipAny All rights reserved.",
+    "url": "/"
+  },
+    "copyright": "© 2025 • ClearClauses All rights reserved.",
     "nav": {
       "items": [
         {

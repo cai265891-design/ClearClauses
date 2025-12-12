@@ -81,7 +81,7 @@ export default function Footer({ footer }: { footer: FooterType }) {
                     target="_blank"
                     className="px-2 text-primary"
                   >
-                    build with ShipAny
+                    build with ClearClauses
                   </a>
                 )}
               </p>

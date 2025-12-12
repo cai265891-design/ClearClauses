@@ -1,4 +1,4 @@
-# ShipAny Template One
+# ClearClauses Template One
 
 Ship Any AI SaaS Startups in hours.
 
@@ -44,7 +44,7 @@ cp .env.example .env.development
 
 - Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fshipanyai%2Fshipany-template-one&project-name=my-shipany-project&repository-name=my-shipany-project&redirect-url=https%3A%2F%2Fshipany.ai&demo-title=ShipAny&demo-description=Ship%20Any%20AI%20Startup%20in%20hours%2C%20not%20days&demo-url=https%3A%2F%2Fshipany.ai&demo-image=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FGgGSW3La8AAGJgU%3Fformat%3Djpg%26name%3Dlarge)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fshipanyai%2Fshipany-template-one&project-name=my-shipany-project&repository-name=my-shipany-project&redirect-url=https%3A%2F%2Fshipany.ai&demo-title=ClearClauses&demo-description=Ship%20Any%20AI%20Startup%20in%20hours%2C%20not%20days&demo-url=https%3A%2F%2Fshipany.ai&demo-image=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FGgGSW3La8AAGJgU%3Fformat%3Djpg%26name%3Dlarge)
 
 - Deploy to Cloudflare
 
@@ -79,9 +79,9 @@ npm run cf:deploy
 
 ## Community
 
-- [ShipAny](https://shipany.ai)
+- [ClearClauses](https://shipany.ai)
 - [Documentation](https://docs.shipany.ai)
 
 ## License
 
-- [ShipAny AI SaaS Boilerplate License Agreement](LICENSE)
+- [ClearClauses AI SaaS Boilerplate License Agreement](LICENSE)

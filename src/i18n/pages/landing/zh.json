@@ -3,54 +3,48 @@
   "theme": "light",
   "header": {
     "brand": {
-      "title": "ShipAny",
+      "title": "ClearClauses",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "ClearClauses"
       },
       "url": "/"
     },
-    "nav": {
-      "items": [
-        {
-          "title": "功能特点",
-          "url": "/#feature",
-          "icon": "RiSparkling2Line"
-        },
-        {
-          "title": "定价",
-          "url": "/pricing",
-          "icon": "RiMoneyDollarCircleLine"
-        },
-        {
-          "title": "案例展示",
-          "url": "/showcase",
-          "icon": "RiApps2Line"
-        },
-        {
-          "title": "文档",
-          "url": "/docs",
-          "icon": "RiBookOpenLine"
-        }
-      ]
-    },
-    "buttons": [
+  "nav": {
+    "items": [
       {
-        "title": "获取 ShipAny",
-        "url": "https://shipany.ai",
-        "target": "_blank",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
+        "title": "功能特点",
+        "url": "/#feature",
+        "icon": "RiSparkling2Line"
+      },
+      {
+        "title": "定价",
+        "url": "/pricing",
+        "icon": "RiMoneyDollarCircleLine"
+      },
+      {
+        "title": "模板",
+        "url": "/templates",
+        "icon": "RiLayoutMasonryLine"
       }
-    ],
-    "show_sign": true,
-    "show_theme": true,
-    "show_locale": true
+    ]
+  },
+  "buttons": [
+    {
+      "title": "登录",
+      "url": "/auth/signin",
+      "variant": "default",
+      "icon": "RiLoginCircleLine"
+    }
+  ],
+  "show_sign": false,
+  "show_theme": false,
+  "show_locale": false
   },
   "hero": {
     "title": "几小时内快速构建 AI 创业项目，而不是几天",
     "highlight_text": "快速构建",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板。<br/>通过丰富的模板和组件快速启动。",
+    "description": "ClearClauses 是一个用于构建 AI SaaS 创业项目的 NextJS 模板。<br/>通过丰富的模板和组件快速启动。",
     "announcement": {
       "label": "2025",
       "title": "🎉 新年快乐",
@@ -77,7 +71,7 @@
     "show_badge": false
   },
   "branding": {
-    "title": "ShipAny 建立在巨人的肩膀上",
+    "title": "ClearClauses 建立在巨人的肩膀上",
     "items": [
       {
         "title": "Next.js",
@@ -118,9 +112,9 @@
   },
   "introduce": {
     "name": "introduce",
-    "title": "什么是 ShipAny",
+    "title": "什么是 ClearClauses",
     "label": "介绍",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板，内置多种模板和组件。",
+    "description": "ClearClauses 是一个用于构建 AI SaaS 创业项目的 NextJS 模板，内置多种模板和组件。",
     "image": {
       "src": "/imgs/features/1.png"
     },
@@ -144,7 +138,7 @@
   },
   "benefit": {
     "name": "benefit",
-    "title": "为什么选择 ShipAny",
+    "title": "为什么选择 ClearClauses",
     "label": "优势",
     "description": "获取启动 AI 创业所需的一切 - 从即用型模板到技术支持。",
     "items": [
@@ -176,7 +170,7 @@
   },
   "usage": {
     "name": "usage",
-    "title": "如何使用 ShipAny 启动项目",
+    "title": "如何使用 ClearClauses 启动项目",
     "description": "通过三个简单步骤启动您的 AI SaaS 创业项目：",
     "image": {
       "src": "/imgs/features/1.png"
@@ -185,15 +179,15 @@
     "text_align": "center",
     "items": [
       {
-        "title": "获取 ShipAny",
-        "description": "一次性付款购买 ShipAny。查收邮件获取代码和文档。",
+        "title": "获取 ClearClauses",
+        "description": "一次性付款购买 ClearClauses。查收邮件获取代码和文档。",
         "image": {
           "src": "/imgs/features/5.png"
         }
       },
       {
         "title": "开始您的项目",
-        "description": "阅读文档并克隆 ShipAny 代码。开始构建您的 AI SaaS 创业项目。",
+        "description": "阅读文档并克隆 ClearClauses 代码。开始构建您的 AI SaaS 创业项目。",
         "image": {
           "src": "/imgs/features/6.png"
         }
@@ -216,7 +210,7 @@
   },
   "feature": {
     "name": "feature",
-    "title": "ShipAny 核心功能",
+    "title": "ClearClauses 核心功能",
     "description": "快速高效启动 AI SaaS 创业所需的一切。",
     "items": [
       {
@@ -254,7 +248,7 @@
   "stats": {
     "name": "stats",
     "label": "统计",
-    "title": "用户喜爱 ShipAny",
+    "title": "用户喜爱 ClearClauses",
     "description": "因为它易于使用且快速发布。",
     "icon": "FaRegHeart",
     "items": [
@@ -278,14 +272,14 @@
   "testimonial": {
     "name": "testimonial",
     "label": "用户评价",
-    "title": "用户如何评价 ShipAny",
-    "description": "听听使用 ShipAny 启动 AI 创业项目的开发者和创始人怎么说。",
+    "title": "用户如何评价 ClearClauses",
+    "description": "听听使用 ClearClauses 启动 AI 创业项目的开发者和创始人怎么说。",
     "icon": "GoThumbsup",
     "items": [
       {
         "title": "陈大卫",
         "label": "AIWallpaper.shop 创始人",
-        "description": "ShipAny 为我们节省了数月的开发时间。我们仅用 2 天就启动了 AI 壁纸业务，一周内就获得了第一个付费客户！",
+        "description": "ClearClauses 为我们节省了数月的开发时间。我们仅用 2 天就启动了 AI 壁纸业务，一周内就获得了第一个付费客户！",
         "image": {
           "src": "/imgs/users/1.png"
         }
@@ -301,7 +295,7 @@
       {
         "title": "马库斯",
         "label": "独立开发者",
-        "description": "作为独立开发者，ShipAny 给了我所需的一切 - 身份验证、支付、AI 集成和漂亮的 UI。一个周末就启动了我的 SaaS！",
+        "description": "作为独立开发者，ClearClauses 给了我所需的一切 - 身份验证、支付、AI 集成和漂亮的 UI。一个周末就启动了我的 SaaS！",
         "image": {
           "src": "/imgs/users/3.png"
         }
@@ -317,7 +311,7 @@
       {
         "title": "詹姆斯",
         "label": "GPTs.works 技术主管",
-        "description": "ShipAny 的基础设施非常稳固。我们从 0 扩展到 1 万用户都没碰后端。这是我们 AI 创业最好的投资。",
+        "description": "ClearClauses 的基础设施非常稳固。我们从 0 扩展到 1 万用户都没碰后端。这是我们 AI 创业最好的投资。",
         "image": {
           "src": "/imgs/users/5.png"
         }
@@ -325,7 +319,7 @@
       {
         "title": "张安娜",
         "label": "创业者",
-        "description": "从想法到上线只用了 3 天！ShipAny 的模板和部署工具让我们能够以令人难以置信的速度测试 AI 业务概念。",
+        "description": "从想法到上线只用了 3 天！ClearClauses 的模板和部署工具让我们能够以令人难以置信的速度测试 AI 业务概念。",
         "image": {
           "src": "/imgs/users/6.png"
         }
@@ -335,42 +329,42 @@
   "faq": {
     "name": "faq",
     "label": "常见问题",
-    "title": "关于 ShipAny 的常见问题",
+    "title": "关于 ClearClauses 的常见问题",
     "description": "还有其他问题？通过 Discord 或电子邮件联系我们。",
     "items": [
       {
-        "title": "ShipAny 究竟是什么，它是如何工作的？",
-        "description": "ShipAny 是一个专门为构建 AI SaaS 创业项目设计的综合性 NextJS 模板。它提供即用型模板、基础设施设置和部署工具，帮助您在几小时内而不是几天内启动 AI 业务。"
+        "title": "ClearClauses 究竟是什么，它是如何工作的？",
+        "description": "ClearClauses 是一个专门为构建 AI SaaS 创业项目设计的综合性 NextJS 模板。它提供即用型模板、基础设施设置和部署工具，帮助您在几小时内而不是几天内启动 AI 业务。"
       },
       {
-        "title": "使用 ShipAny 需要高级技术技能吗？",
-        "description": "虽然基本的编程知识会有帮助，但 ShipAny 设计得非常开发者友好。我们的模板和文档使您即使不是 AI 或云基础设施专家也能轻松入门。"
+        "title": "使用 ClearClauses 需要高级技术技能吗？",
+        "description": "虽然基本的编程知识会有帮助，但 ClearClauses 设计得非常开发者友好。我们的模板和文档使您即使不是 AI 或云基础设施专家也能轻松入门。"
       },
       {
-        "title": "我可以用 ShipAny 构建什么类型的 AI SaaS？",
-        "description": "ShipAny 支持广泛的 AI 应用，从内容生成到数据分析工具。我们的模板涵盖流行用例，如 AI 聊天机器人、内容生成器、图像处理应用等。"
+        "title": "我可以用 ClearClauses 构建什么类型的 AI SaaS？",
+        "description": "ClearClauses 支持广泛的 AI 应用，从内容生成到数据分析工具。我们的模板涵盖流行用例，如 AI 聊天机器人、内容生成器、图像处理应用等。"
       },
       {
-        "title": "使用 ShipAny 通常需要多长时间才能启动？",
-        "description": "使用 ShipAny，您可以在几小时内完成工作原型，并在几小时内完成生产就绪的应用。我们的一键部署和预配置基础设施显著缩短了传统的数月开发周期。"
+        "title": "使用 ClearClauses 通常需要多长时间才能启动？",
+        "description": "使用 ClearClauses，您可以在几小时内完成工作原型，并在几小时内完成生产就绪的应用。我们的一键部署和预配置基础设施显著缩短了传统的数月开发周期。"
       },
       {
-        "title": "ShipAny 的基础设施包括什么？",
-        "description": "ShipAny 提供完整的基础设施栈，包括身份验证、数据库设置、API 集成、支付处理和可扩展的云部署。一切都按照行业最佳实践预先配置。"
+        "title": "ClearClauses 的基础设施包括什么？",
+        "description": "ClearClauses 提供完整的基础设施栈，包括身份验证、数据库设置、API 集成、支付处理和可扩展的云部署。一切都按照行业最佳实践预先配置。"
       },
       {
         "title": "我可以自定义模板以匹配我的品牌吗？",
-        "description": "当然可以！所有 ShipAny 模板都完全可定制。您可以修改设计、功能和功能性以匹配您的品牌标识和特定业务需求，同时保持强大的底层基础设施。"
+        "description": "当然可以！所有 ClearClauses 模板都完全可定制。您可以修改设计、功能和功能性以匹配您的品牌标识和特定业务需求，同时保持强大的底层基础设施。"
       }
     ]
   },
   "cta": {
     "name": "cta",
     "title": "启动您的第一个 AI SaaS 创业项目",
-    "description": "从这里开始，使用 ShipAny 启动。",
+    "description": "从这里开始，使用 ClearClauses 启动。",
     "buttons": [
       {
-        "title": "获取 ShipAny",
+        "title": "获取 ClearClauses",
         "url": "https://shipany.ai",
         "target": "_blank",
         "icon": "GoArrowUpRight"
@@ -386,15 +380,15 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "ShipAny",
-      "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板。通过丰富的模板和组件快速启动。",
+      "title": "ClearClauses",
+      "description": "ClearClauses 是一个用于构建 AI SaaS 创业项目的 NextJS 模板。通过丰富的模板和组件快速启动。",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "ClearClauses"
       },
       "url": "/"
     },
-    "copyright": "© 2025 • ShipAny 保留所有权利。",
+    "copyright": "© 2025 • ClearClauses 保留所有权利。",
     "nav": {
       "items": [
         {
